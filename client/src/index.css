@@ -1,0 +1,135 @@
+* {
+  margin: 0; /* reset */
+  padding: 0; /* reset */
+  scroll-behavior: smooth;
+  box-sizing: border-box; 
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+body {
+  background-color: #ffffff;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.create{
+  background-image: url("./images/create-recipe.jpg");
+  background-size: 1500px;
+}
+
+@font-face {
+  font-family: 'Bookerly Display';
+  src: url('./fonts/BookerlyDisplay-Regular.woff2') format('woff2'),
+      url('./fonts/BookerlyDisplay-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bookerly';
+  src: url('./fonts/Bookerly-BoldItalic.woff2') format('woff2'),
+      url('./fonts/Bookerly-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bookerly Display';
+  src: url('./fonts/BookerlyDisplay-Bold.woff2') format('woff2'),
+      url('./fonts/BookerlyDisplay-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bookerly Display';
+  src: url('./fonts/BookerlyDisplay-BoldItalic.woff2') format('woff2'),
+      url('./fonts/BookerlyDisplay-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bookerly Display';
+  src: url('./fonts/BookerlyDisplay-Italic.woff2') format('woff2'),
+      url('./fonts/BookerlyDisplay-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bookerly';
+  src: url('./fonts/Bookerly-LightItalic.woff2') format('woff2'),
+      url('./fonts/Bookerly-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bookerly';
+  src: url('./fonts/Bookerly-LightItalic.woff2') format('woff2'),
+      url('./fonts/Bookerly-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bookerly';
+  src: url('./fonts/Bookerly-Bold.woff2') format('woff2'),
+      url('./fonts/Bookerly-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bookerly';
+  src: url('./fonts/Bookerly-Light.woff2') format('woff2'),
+      url('./fonts/Bookerly-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bookerly';
+  src: url('./fonts/Bookerly-Italic.woff2') format('woff2'),
+      url('./fonts/Bookerly-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bookerly';
+  src: url('./fonts/Bookerly-Italic.woff2') format('woff2'),
+      url('./fonts/Bookerly-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bookerly';
+  src: url('./fonts/Bookerly-Regular.woff2') format('woff2'),
+      url('./fonts/Bookerly-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+

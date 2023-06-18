@@ -1,0 +1,32 @@
+.container {
+  background-image: url("../images/create-recipe.jpg");
+  background-size: 1500px;
+}
+
+.create-recipe-card {
+  max-width: 550px;
+  border: 1px solid black;
+  padding: 40px;
+  margin: 20px auto;
+  border-radius: 5px;
+  background-color: #fdf6e3;
+}
+
+.recipe-form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; 
+}
+
+.recipe-form h3 {
+  margin: 5px auto;
+}
+
+.recipe-form label {
+  margin-bottom: 5px;
+}
+
+.recipe-form input,textarea {
+  margin-bottom: 10px;
+  padding: 5px;
+}
