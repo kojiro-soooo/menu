@@ -1,0 +1,40 @@
+
+@font-face {
+  font-family: 'Bookerly';
+  src: url('../fonts/Bookerly-BoldItalic.woff2') format('woff2'),
+      url('../fonts/Bookerly-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+.browse-container{
+  display: flex;
+  flex-wrap: wrap;
+  width: 1200px;
+  background-color: white;
+  margin: 10px auto;
+}
+
+.browse-card{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 261.25px;
+  height: 365px;
+  margin: 15px;
+  border: 1px solid rgba(0,0,0,.15);
+}
+
+.browse-card__image img{
+  max-width: 100%;
+}
+
+.browse-card__text {
+  color: black;
+  padding: 0.75rem;
+}
+
+.browse-card__title{
+  margin-bottom: 10px;
+}

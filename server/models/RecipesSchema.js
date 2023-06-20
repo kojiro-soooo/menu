@@ -1,15 +1,5 @@
 const mongoose = require("mongoose");
 
-//Allowed types:
-// String
-// Number
-// Date
-// Boolean
-// Buffer
-// ObjectId
-// Mixed
-// Array
-
 const RecipesSchema = new mongoose.Schema({
   title: {
     type: String,
@@ -43,7 +33,7 @@ const RecipesSchema = new mongoose.Schema({
     type: Number,
     required: false,
   },
-  difficulty: {
+  complexity: {
     type: Number,
     required: false,
   },
@@ -55,9 +45,22 @@ const RecipesSchema = new mongoose.Schema({
     type: Array,
     required: false,
   },
+  imageURL: {
+    type: String,
+    required: false
+  }
 });
 
 const Recipes = mongoose.model("Recipes", RecipesSchema)
 
 module.exports = Recipes;
 
+//Allowed types:
+// String
+// Number
+// Date
+// Boolean
+// Buffer
+// ObjectId
+// Mixed
+// Array

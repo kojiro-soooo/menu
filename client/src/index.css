@@ -12,7 +12,10 @@
 }
 
 body {
-  background-color: #ffffff;
+  /* background-color: #ffffff;
+   */
+   background-color: white;
+
 }
 
 code {
@@ -20,10 +23,10 @@ code {
     monospace;
 }
 
-.create{
+/* .create{
   background-image: url("./images/create-recipe.jpg");
   background-size: 1500px;
-}
+} */
 
 @font-face {
   font-family: 'Bookerly Display';

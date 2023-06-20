@@ -13,6 +13,7 @@ const Create = () => {
   const [totalTime, setTotalTime] = useState();
   const [servings, setServings] = useState();
   const [tags, setTags] = useState();
+  // const [imageUrl, setImageUrl] = useState();
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -30,10 +31,6 @@ const Create = () => {
       tags: tags
     }
 
-    // const response = await Axios.post("http://localhost:5050/api/create",
-    // newRecipe)
-    // console.log(response)
-
     await fetch("/api/create", {
       method: "POST",
       headers: {
@@ -44,16 +41,15 @@ const Create = () => {
     .then(response => response.json())
     .then(res => console.log(res))
     .catch(error=>{
-      window.alert(error);
+      console.log(error);
     });
 
-    console.log("after fetch")
 
     // navigate("/");
   }
 
   return (
-    <div className="container">
+    <div className="create-container">
       <div className="create-recipe-card">
         <form className="recipe-form" onSubmit={handleSubmit}>
           <h3>Share your very own recipe with the world!</h3>
