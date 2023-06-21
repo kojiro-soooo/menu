@@ -30,7 +30,7 @@
 } */
 
 .recipe-card {
-  margin: 30px auto;
+  margin: 30px 50px;
   display: flex;
   justify-content: space-between;
   flex-basis: 95%;
@@ -51,8 +51,7 @@
   flex-direction: column;
   height: 85px;
   width: 225px;
-  background-color: #fff740;
-  opacity: 0.9;
+  background-color: #feff9c;
   border: 0.25px solid rgba(0, 0, 0, 0.15);
   /* padding: 10px; */
 }
@@ -98,6 +97,7 @@
 }
 
 .recipe-details {
+  margin: 30px 50px;
   background-color: white;
   border-radius: 5px;
   max-width: 100%;

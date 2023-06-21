@@ -13,14 +13,14 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="navbar--container">
-        <div className="navbar--logo">
+      <div className="navbar__container">
+        <div className="navbar__logo">
           <NavLink to="/">
-            <img src={Logo} height="90"></img>
+            <img src={Logo}></img>
           </NavLink>
         </div>
         <div className="logo">
-          <img className="navbar--menu-icon" src={HamburgerMenu} onClick={toggleNavBar} height="60" width="60"></img>
+          <img className="navbar__menu-icon" src={HamburgerMenu} onClick={toggleNavBar} height="60" width="60"></img>
         </div>
         {/* if navvBar===True, then classname: nav-elements active */}
         <div className={`nav-elements ${navBar && 'active'}`}>
