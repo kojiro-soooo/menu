@@ -6,12 +6,14 @@ import Navbar from "./components/Navbar";
 import Feedback from "./pages/Feedback";
 import Recipe from "./pages/Recipe";
 import About from "./pages/About";
+import Footer from "./components/Footer"
 import "./index.css";
 
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router >
+        <div className="app-container">
         <Navbar />
         <Routes>
           <Route exact path="/" element={<Home />}></Route>
@@ -21,6 +23,8 @@ function App() {
           <Route path="/feedback" element={<Feedback />}></Route>
           <Route path="/browse/recipes/:id" element={<Recipe />}></Route>
         </Routes>
+        <Footer />
+        </div>
       </Router>
     </div>
   );

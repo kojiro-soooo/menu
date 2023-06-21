@@ -1,9 +1,124 @@
-.featured-recipes {
-  height: 800px;
+.home-container {
+  max-width: 1350px;
+  margin: 20px auto 40px auto;
+  padding: 20px 50px;
+  height: 100%;
+  min-height: 100vh;
+  /* padding: 40px 50px; */
 }
 
 .banner {
   background-image: url("https://images.unsplash.com/photo-1606787503066-794bb59c64bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80");
   background-size: cover;
   height: 500px;
+}
+
+.featured-recipes {
+  /* background-image: url("https://images.unsplash.com/photo-1606787503066-794bb59c64bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80");
+  background-size: cover;
+  backdrop-filter: blur(50px); */
+
+  /* margin: 40px 40px; */
+  max-width: 100%;
+  margin-bottom: 80px;
+}
+
+.featured-recipes__title {
+  margin-bottom: 40px;
+  color: rgb(255, 166, 0);
+  font-size: 40px;
+  text-align: center;
+}
+
+.carousel__container {
+  overflow: hidden;
+  max-width: 100%;
+  margin: 40px auto;
+  max-height: 100%;
+}
+
+.carousel__slide {
+  position: relative;
+  display: flex;
+}
+
+.carousel__img {
+  max-width: 100%;
+  max-height: 500px;
+}
+
+.carousel__title {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%); /* iOS */
+  transform: translate(-50%, -50%);
+  /* width: 600px; */
+  /* height: 60px; */
+  margin: 20px auto;
+  text-align: center;
+  backdrop-filter: blur(5px) brightness(85%);
+  color: white;
+  font-size: 25px;
+}
+
+.countries__title {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.countries__title h1 {
+  font-size: 40px;
+  color: rgb(0, 95, 0);
+}
+
+.country-container {
+  display: flex;
+  /* width: 1200px; */
+  flex-wrap: wrap;
+  max-width: 100%;
+  background-color: white;
+  margin: 10px auto;
+  padding: 40px;
+  /* padding: 40px 50px; */
+}
+
+/* .countries__cards {
+  flex-basis: 33%;
+} */
+
+.countries__cards {
+  display: flex;
+  flex-wrap: wrap;
+  /* background-color: blue; */
+  justify-content: center;
+  max-width: 100%;
+}
+
+.country-card {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 33%;
+  background-color: white;
+  width: 261.25px;
+  height: 365px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.country-card__image {
+  margin: 0 auto;
+}
+
+.country-card__image img {
+  max-width: 150%;
+}
+
+.country-card__text {
+  color: black;
+  padding: 0.75rem;
+}
+
+.country-card__title {
+  margin-bottom: 10px;
 }
