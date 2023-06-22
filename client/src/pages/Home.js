@@ -10,7 +10,7 @@ const Home = () => {
 
   useEffect(() => {
     const getTopFive = async () => {
-      const response = await fetch("https://boiling-castle-95970-3d9abd54de8a.herokuapp.com/api", {
+      const response = await fetch("https://boiling-castle-95970-3d9abd54de8a.herokuapp.com/", {
         method: "GET",
       });
       const json = await response.json();
