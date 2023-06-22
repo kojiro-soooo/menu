@@ -2,7 +2,7 @@
   "name": "authentic-recipes",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://boiling-castle-95970-3d9abd54de8a.herokuapp.com/api",
+  "proxy": "https://boiling-castle-95970-3d9abd54de8a.herokuapp.com/api/",
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
