@@ -13,6 +13,8 @@
   max-width: 1200px;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;  
+
   /* justify-content: space-between; */
 }
 
@@ -142,3 +144,30 @@
 /* .recipe-img img {
   max-width: 50%;
 } */
+
+.editor{
+  display: flex;
+  justify-content: end;
+  margin: 10px 50px;
+  max-width: 100%;
+}
+
+.editor button {
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.editor button:hover{
+  cursor: pointer;
+}
+
+.edit {
+  margin-right: 20px;
+  background-color: #ffc007;
+  border-style: none;
+}
+
+.delete{
+  background-color: #dc3444;
+  border-style: none;
+}

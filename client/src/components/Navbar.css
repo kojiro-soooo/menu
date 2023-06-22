@@ -79,7 +79,7 @@
   }
 }
 
-@media (max-width: 830px) {
+@media (max-width: 768px) {
   .navbar__menu-icon {
     display: block;
     cursor: pointer;

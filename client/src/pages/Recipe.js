@@ -1,11 +1,14 @@
 import { React, useEffect, useState } from "react";
 import { Recipes } from "../Data";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import "./Recipe.css";
 
 const Recipe = () => {
   const [recipe, setRecipe] = useState(null);
   const { id } = useParams();
+  const navigate = useNavigate();
+
+  // console.log(id);
 
   useEffect(() => {
     const getRecipe = async () => {
@@ -13,11 +16,20 @@ const Recipe = () => {
         method: "GET",
       });
       const json = await response.json();
-      console.log(json);
+      // console.log(json);
       setRecipe(json);
     };
     getRecipe();
   }, []);
+
+  const handleDelete = async () => {
+    // console.log(id)
+    await fetch(`/api/browse/recipes/${id}`, {
+      method: "DELETE",
+    });
+
+    navigate("/browse");
+  };
 
   return (
     recipe && (
@@ -67,6 +79,12 @@ const Recipe = () => {
               <img src={recipe.imageURL}></img>
             </div>
           </div>
+        </div>
+        <div className="editor">
+          <button className="edit">Edit Recipe</button>
+          <button className="delete" onClick={()=> {handleDelete()}}>
+            Delete Recipe
+          </button>
         </div>
       </div>
     )

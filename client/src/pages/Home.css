@@ -40,11 +40,13 @@
 .carousel__slide {
   position: relative;
   display: flex;
+  min-height: 100%;
 }
 
 .carousel__img {
   max-width: 100%;
   max-height: 500px;
+  width: 100%;
 }
 
 .carousel__title {
@@ -107,11 +109,20 @@
 }
 
 .country-card__image {
+  display: flex;
+  justify-content: center;
   margin: 0 auto;
+  height: 80%;
 }
 
 .country-card__image img {
-  max-width: 150%;
+  /* max-width: 100%; */
+  /* min-width: 100%; */
+  /* min-height: 100%; */
+  width: auto;
+  height: auto;
+  max-width: 160%;
+  min-height: 100%;
 }
 
 .country-card__text {
