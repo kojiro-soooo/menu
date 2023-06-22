@@ -13,16 +13,13 @@ const About = () => {
             traditions that remind us of the places we've called home: Japan,
             India, Australia, the USA, and beyond.
           </p>
-          <div className="about__img1">
-            <img src="https://images.unsplash.com/photo-1606787503066-794bb59c64bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"></img>
-            {/* <p>
+          <p>
             Our mission is to create a modern and polished platform where food
             enthusiasts, like yourself, can come together to explore and share
             recipes from every corner of the world. We aim to fill the void we
             noticed in the online culinary landscape by offering a unique set of
             features that set us apart.
-          </p> */}
-          </div>
+          </p>
         </div>
         <p>
           Browse Recipes from Every Country: We have curated an extensive
