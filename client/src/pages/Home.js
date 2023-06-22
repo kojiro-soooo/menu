@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Carousel } from "@mantine/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import { Countries } from '../data';
+import { Countries } from "../data";
 import { Link } from "react-router-dom";
 import { backend_url } from "../config";
 import "./Home.css";
@@ -10,7 +10,7 @@ const Home = () => {
   const [topFive, setTopFive] = useState();
 
   useEffect(() => {
-    window.scrollTo(0,0); 
+    window.scrollTo(0, 0);
   }, []);
 
   useEffect(() => {
@@ -23,7 +23,6 @@ const Home = () => {
     };
     getTopFive();
   }, []);
-
 
   const autoplay = useRef(Autoplay({ delay: 4000 }));
 
@@ -73,6 +72,7 @@ const Home = () => {
               ))}
           </Carousel>
         </div>
+        <div className="featured-background"></div>
       </section>
       <section className="countries">
         <div className="countries__title">
@@ -82,10 +82,11 @@ const Home = () => {
           <div className="countries__cards">
             {Countries &&
               Countries.map((country) => (
-                <Link className="card"
+                <Link
+                  className="card"
                   style={{ textDecoration: "none" }}
                   to={`/browse`}
-                  state={{country: country.country.toLowerCase()}}
+                  state={{ country: country.country.toLowerCase() }}
                 >
                   <div className="country-card">
                     <div className="country-card__image">
@@ -98,7 +99,13 @@ const Home = () => {
                 </Link>
               ))}
           </div>
+          <div class="to-browse">
+            <Link to={"/browse"}>
+              <button>See All Recipes</button>
+            </Link>
+          </div>
         </div>
+        <div className="countries-background"></div>
       </section>
       {/* <section className="banner"></section> */}
     </div>

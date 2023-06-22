@@ -16,7 +16,7 @@ body {
   /* height: 100%; */
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: #fcefd2;
   min-height: 100%;
 }
 
@@ -44,6 +44,23 @@ form input,textarea {
   padding: 5px;
 }
 
+button {
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px 16px;
+  /* box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); */
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  text-align: center;
+  background-color: #efefef;
+}
+
+button:hover, button:focus{
+  background-color: #fffdfd;
+}
 
 /* .page-container {
   width: 1350px;

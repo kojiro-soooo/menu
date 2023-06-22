@@ -1,7 +1,6 @@
 .navbar__container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -9,20 +8,27 @@
 }
 
 .navbar {
-  height: 80px;
-  background-color: #fef7e5;
+  padding: 10px 20px;
+  /* height: 20%; */
+  background-color: #fcefd2;
   position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+
 }
 
 .navbar__logo {
   /* display: flex;
   justify-content: start; */
   max-height: 100%;
+  max-width: 100%;
 }
 
 .navbar__logo img {
   max-height: 100px;
 }
+
+.navbar__logo a{
+height: 0px;}
 
 
 .navbar__menu-icon{

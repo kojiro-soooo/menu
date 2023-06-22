@@ -69,7 +69,7 @@ const Create = () => {
             onChange={(event) => {
               setTitle(event.target.value);
             }}
-            placeholder="Mom's Mapo Tofu"
+            placeholder="Oyako Donburi"
             required
           ></input>
           <label>Description: </label>
