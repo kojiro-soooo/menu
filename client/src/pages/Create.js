@@ -33,7 +33,7 @@ const Create = () => {
       tags: tags
     }
 
-    await fetch("/api/create", {
+    await fetch("https://boiling-castle-95970-3d9abd54de8a.herokuapp.com/create", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

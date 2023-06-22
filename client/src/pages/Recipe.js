@@ -12,7 +12,7 @@ const Recipe = () => {
 
   useEffect(() => {
     const getRecipe = async () => {
-      const response = await fetch(`/api/browse/recipes/${id}`, {
+      const response = await fetch(`https://boiling-castle-95970-3d9abd54de8a.herokuapp.com/browse/recipes/${id}`, {
         method: "GET",
       });
       const json = await response.json();
@@ -24,7 +24,7 @@ const Recipe = () => {
 
   const handleDelete = async () => {
     // console.log(id)
-    await fetch(`/api/browse/recipes/${id}`, {
+    await fetch(`https://boiling-castle-95970-3d9abd54de8a.herokuapp.com/browse/recipes/${id}`, {
       method: "DELETE",
     });
 

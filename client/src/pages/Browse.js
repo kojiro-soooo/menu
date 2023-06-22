@@ -17,7 +17,7 @@ const Browse = () => {
   // fetch data on first render
   useEffect(() => {
     const fetchRecipes = async () => {
-      const response = await fetch("/api/browse", {
+      const response = await fetch("https://boiling-castle-95970-3d9abd54de8a.herokuapp.com/browse", {
         method: "GET",
       });
       const json = await response.json();
