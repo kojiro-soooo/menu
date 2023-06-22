@@ -19,11 +19,11 @@ app.use(cors({origin: true, credentials: true}));
 // any incoming request with a JSON payload is automatically parsed, making data readily available via req.body
 app.use(express.json());
 
-app.get('/', (req, res) => { res.send('Hello from Express!')})
+// app.get('/', (req, res) => { res.send('Hello from Express!')})
 
 
 // API
-app.use('https://boiling-castle-95970-3d9abd54de8a.herokuapp.com',router);
+app.use('/',router);
 
 app.listen(process.env.PORT || 5050, () => {
   console.log("Server is running at port 5050");
