@@ -1,6 +1,6 @@
 ### ChatGPT prompt used to generate recipes:
 
-Give me 24 recipes formatted exactly like the following as json objects, with no commas in between opening and closing double quotations. Make the content of the description key written as if it's written by someone who is sharing a family or personal recipe. Recipes should be diverse, meaning that they come from a variety of countries, not just well-known countries or well-known recipes. Each recipe should also originate from a single country. For example, Chicken Tikka Masala is a recipe that is not known to originate from a single country, instead, it's said to have originated possibly from India, Pakistan, and Ireland. Only give me recipes that are known to be from a specific country. Separate each recipe object with a comma. Additionally, each attribute should be in quotations. For example, title should be "title", description should be "description", and so on. Finally, every recipe should be unique, which means you cannot give me two JSON objects with the same value for the title attribute. You will give me recipes 5 at a time, and I will respond when I want the next five.
+Give me 5 recipes formatted exactly like the following as json objects, with no commas in between opening and closing double quotations. Make the content of the description key written as if it's written by someone who is sharing a family or personal recipe. Recipes should be diverse, meaning that they come from a variety of countries, not just well-known countries or well-known recipes. Each recipe should also originate from a single country. For example, Chicken Tikka Masala is a recipe that is not known to originate from a single country, instead, it's said to have originated possibly from India, Pakistan, and Ireland. Only give me recipes that are known to be from a specific country. Separate each recipe object with a comma. Additionally, each attribute should be in quotations. For example, title should be "title", description should be "description", and so on. Finally, every recipe should be unique, which means you cannot give me two JSON objects with the same value for the title attribute.
 
 {
     {title: "Chicken Alfredo Pasta"},
@@ -33,7 +33,7 @@ Give me 24 recipes formatted exactly like the following as json objects, with no
     {taste: 5},
     {difficulty: 2},
     {author: "Italian Food Lover"},
-    {tags: ["pasta", "chicken", "alfredo", "italian"]},
+    {tags: ["pasta", "chicken", "alfredo", "italian"]},}
 
 
 # Getting Started with Create React App
