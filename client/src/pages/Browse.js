@@ -1,5 +1,5 @@
 import { React, useState, useEffect } from "react";
-import { backend_url } from "../config"
+import { backend_url } from "../config";
 import { Link, useLocation } from "react-router-dom";
 import "./Browse.css";
 
@@ -10,9 +10,21 @@ const Browse = () => {
   const location = useLocation();
   const [country, setCountry] = useState(
     location.state ? location.state.country : ""
-  )
-  // const { country } = location.state || {};
+  );
   const [search, setSearch] = useState(country);
+
+  const capitalize = (str) => {
+    const words = str.split(" ");
+    for (let i = 0; i < words.length; i++) {
+      words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+    }
+    return words.join(" ");
+  };
+
+  // scroll to top on first render
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   // fetch data on first render
   useEffect(() => {
@@ -25,11 +37,6 @@ const Browse = () => {
       setSearch(country);
     };
     fetchRecipes();
-  }, []);
-
-  // scroll to top on first render
-  useEffect(() => {
-    window.scrollTo(0, 0);
   }, []);
 
   // update filter results whenever search text is updated
@@ -116,10 +123,15 @@ const Browse = () => {
                         <img src={recipe.imageURL}></img>
                       </div>
                       <div className="browse-card__text">
-                        <h2 className="browse-card__title">{recipe.title}</h2>
-                        <p>Authenticity: {recipe.authenticity}</p>
-                        <p>Taste: {recipe.taste}</p>
-                        <p>Complexity: {recipe.complexity}</p>
+                        <h3 className="browse-card__title">{recipe.title}</h3>
+                        <p id="browse-card__country">
+                          {capitalize(recipe.country)}
+                        </p>
+                        <div className="browse-card__details">
+                          <p>Authenticity: {recipe.authenticity}</p>
+                          <p>Taste: {recipe.taste}</p>
+                          <p>Complexity: {recipe.complexity}</p>
+                        </div>
                       </div>
                     </div>
                   </Link>
@@ -138,10 +150,15 @@ const Browse = () => {
                       <img src={recipe.imageURL}></img>
                     </div>
                     <div className="browse-card__text">
-                      <h2 className="browse-card__title">{recipe.title}</h2>
-                      <p>Authenticity: {recipe.authenticity}</p>
-                      <p>Taste: {recipe.taste}</p>
-                      <p>Complexity: {recipe.complexity}</p>
+                      <h3 className="browse-card__title">{recipe.title}</h3>
+                      <p id="browse-card__country">
+                        {capitalize(recipe.country)}
+                      </p>
+                      <div className="browse-card__details">
+                        <p>Authenticity: {recipe.authenticity}</p>
+                        <p>Taste: {recipe.taste}</p>
+                        <p>Complexity: {recipe.complexity}</p>
+                      </div>
                     </div>
                   </div>
                 </Link>

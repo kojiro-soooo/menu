@@ -8,22 +8,33 @@
 }
 
 .about__container{
-  max-width: 1500px;
-  margin: 0px auto;
   display: flex;
-  flex-direction: column;
+  flex: column;
+  flex-wrap: wrap;
+  max-width: 1350px;
+  margin: 20px auto 40px auto;
+  padding: 20px 50px;
+  height: 100%;
   min-height: 100vh;
+}
 
+.about__title {
+  margin: 0px auto 20px auto;
 }
 
 .about__content {
   /* margin: 20px 200px; */
 }
 
+.about__content h2 {
+  margin: 40px 50px 40px 50px;
+}
+
 .about__content p {
-  margin: 40px 50px;
+  margin: 0px 50px;
   line-height: 50px;
 }
+
 
 .about__intro{
   display: flex;
@@ -42,9 +53,9 @@
 
 }
 
-.about__p1 {
+/* .about__p1 {
   flex-basis: 50%;
   margin-bottom: 200px;
-  /* font-size: 25px; */
+  font-size: 25px;
   font-family: Bookerly;
-}
+} */

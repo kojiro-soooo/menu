@@ -15,7 +15,14 @@ const Footer = () => {
       <div className="footer-container">
         <div className="communications-container">
           <div className="newsletter-container">
-            <form className="newsletter__form">
+            <form
+              name="newsletter"
+              method="POST"
+              className="newsletter__form"
+              netlify
+            >
+              <input type="hidden" name="newsletter" value="newsletter" />
+
               <div className="newsletter__label">
                 <label>Sign up for our newsletter: </label>
               </div>

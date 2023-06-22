@@ -8,7 +8,10 @@ const Recipe = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  // console.log(id);
+  // scroll to top on first render
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     const getRecipe = async () => {
@@ -24,7 +27,7 @@ const Recipe = () => {
 
   const handleDelete = async () => {
     // console.log(id)
-    await fetch(`/browse/recipes/${id}`, {
+    await fetch(`${backend_url}/browse/recipes/${id}`, {
       method: "DELETE",
     });
 

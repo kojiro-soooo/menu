@@ -139,8 +139,21 @@
   height: 50%;
 }
 
+.browse-card__details {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.browse-card__details p {
+  margin-bottom: 5px;
+}
+
+#browse-card__country {
+  color: rgb(80, 80, 80);
+}
+
 .browse-card__title {
-  margin-bottom: 10px;
+  margin-bottom: 2.5px;
 }
 
 @media (max-width: 768px) {

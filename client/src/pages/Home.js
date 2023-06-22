@@ -10,6 +10,10 @@ const Home = () => {
   const [topFive, setTopFive] = useState();
 
   useEffect(() => {
+    window.scrollTo(0,0); 
+  }, []);
+
+  useEffect(() => {
     const getTopFive = async () => {
       const response = await fetch(`${backend_url}/`, {
         method: "GET",
@@ -20,9 +24,6 @@ const Home = () => {
     getTopFive();
   }, []);
 
-  useEffect(() => {
-    window.scrollTo(0,0); 
-  }, []);
 
   const autoplay = useRef(Autoplay({ delay: 4000 }));
 
