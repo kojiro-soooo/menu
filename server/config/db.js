@@ -1,9 +1,11 @@
+require('dotenv').config()
+const uri = process.env.MONGO_URI;
 const express = require("express");
 const mongoose = require("mongoose");
 const Router = require("../routes/api");
 
 const connectDB = () => {
-  mongoose.connect('mongodb+srv://kojiroso18:cXNPBosOITkbDg9R@authenticrecipes.ca5lw3i.mongodb.net/authentic-recipes?retryWrites=true&w=majority',
+  mongoose.connect(uri,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
