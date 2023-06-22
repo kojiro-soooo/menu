@@ -1,5 +1,4 @@
 import { React, useState, useEffect } from "react";
-import { Recipes } from "../data";
 import { backend_url } from "../config"
 import { Link, useLocation } from "react-router-dom";
 import "./Browse.css";

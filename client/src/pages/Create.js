@@ -1,9 +1,6 @@
-import { formToJSON } from "axios";
 import { React, useState } from "react";
-import Axios from "axios";
 import "./Create.css";
 import { backend_url } from "../config";
-// import { Recipes } from '../Data';
 import { useNavigate } from 'react-router-dom';
 
 const Create = () => {
