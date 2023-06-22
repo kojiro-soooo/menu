@@ -2,6 +2,7 @@ import { formToJSON } from "axios";
 import { React, useState } from "react";
 import Axios from "axios";
 import "./Create.css";
+import { backend_url } from "../config";
 // import { Recipes } from '../Data';
 import { useNavigate } from 'react-router-dom';
 
@@ -33,7 +34,7 @@ const Create = () => {
       tags: tags
     }
 
-    await fetch("https://boiling-castle-95970-3d9abd54de8a.herokuapp.com/create", {
+    await fetch(`${backend_url}/create`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

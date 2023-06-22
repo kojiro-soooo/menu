@@ -1,8 +1,9 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Carousel } from "@mantine/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import { Countries } from '../Data';
+import { Countries } from '../data';
 import { Link } from "react-router-dom";
+import { backend_url } from "../config";
 import "./Home.css";
 
 const Home = () => {
@@ -10,7 +11,7 @@ const Home = () => {
 
   useEffect(() => {
     const getTopFive = async () => {
-      const response = await fetch("https://boiling-castle-95970-3d9abd54de8a.herokuapp.com/", {
+      const response = await fetch(`${backend_url}/`, {
         method: "GET",
       });
       const json = await response.json();

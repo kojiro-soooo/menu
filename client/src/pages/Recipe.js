@@ -1,6 +1,7 @@
 import { React, useEffect, useState } from "react";
-import { Recipes } from "../Data";
+import { Recipes } from "../data";
 import { useParams, useNavigate } from "react-router-dom";
+import { backend_url } from "../config";
 import "./Recipe.css";
 
 const Recipe = () => {
@@ -12,7 +13,7 @@ const Recipe = () => {
 
   useEffect(() => {
     const getRecipe = async () => {
-      const response = await fetch(`https://boiling-castle-95970-3d9abd54de8a.herokuapp.com/browse/recipes/${id}`, {
+      const response = await fetch(`${backend_url}/browse/recipes/${id}`, {
         method: "GET",
       });
       const json = await response.json();
@@ -24,7 +25,7 @@ const Recipe = () => {
 
   const handleDelete = async () => {
     // console.log(id)
-    await fetch(`https://boiling-castle-95970-3d9abd54de8a.herokuapp.com/browse/recipes/${id}`, {
+    await fetch(`/browse/recipes/${id}`, {
       method: "DELETE",
     });
 

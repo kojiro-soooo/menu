@@ -1,5 +1,6 @@
 import { React, useState, useEffect } from "react";
-import { Recipes } from "../Data";
+import { Recipes } from "../data";
+import { backend_url } from "../config"
 import { Link, useLocation } from "react-router-dom";
 import "./Browse.css";
 
@@ -17,7 +18,7 @@ const Browse = () => {
   // fetch data on first render
   useEffect(() => {
     const fetchRecipes = async () => {
-      const response = await fetch("https://boiling-castle-95970-3d9abd54de8a.herokuapp.com/browse", {
+      const response = await fetch(`${backend_url}/browse`, {
         method: "GET",
       });
       const json = await response.json();
