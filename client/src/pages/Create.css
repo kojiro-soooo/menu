@@ -27,6 +27,14 @@
   flex-wrap: wrap; 
 }
 
+.recipe-form input, textarea {
+  margin-bottom: 10px;
+}
+
+.recipe-form textarea {
+  height: auto;
+}
+
 .recipe-form h3 {
   margin: 0px auto 20px auto;
 }
@@ -49,5 +57,3 @@
 .ratings__field:not(:last-child) {
   margin-right:50px;
 }
-
-/* .nav-elements ul li:not(:last-child) { */

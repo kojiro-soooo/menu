@@ -48,17 +48,19 @@ footer {
   margin-right: 50px;
 }
 
-.newsletter__form {
-  /* display: flex;
-  flex-direction: column; */
-}
-
 .newsletter__label {
   padding-bottom: 10px;
 }
 
+.newsletter__input-button {
+  display: flex;
+}
+
 .newsletter__input-button input{ 
   margin-right: 5px;
+}
+
+.newsletter__input-button button{ 
 }
 
 .footer-elements {
