@@ -19,7 +19,7 @@ app.use(cors({origin: true, credentials: true}));
 // any incoming request with a JSON payload is automatically parsed, making data readily available via req.body
 app.use(express.json());
 
-// app.get('/', (req, res) => { res.send('Hello from Express!')})
+app.get('/', (req, res) => { res.send('Hello from Express!')})
 
 
 // API
