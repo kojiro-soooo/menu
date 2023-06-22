@@ -1,24 +1,72 @@
-
 @font-face {
-  font-family: 'Bookerly';
-  src: url('../fonts/Bookerly-BoldItalic.woff2') format('woff2'),
-      url('../fonts/Bookerly-BoldItalic.woff') format('woff');
+  font-family: "Bookerly";
+  src: url("../fonts/Bookerly-BoldItalic.woff2") format("woff2"),
+    url("../fonts/Bookerly-BoldItalic.woff") format("woff");
   font-weight: bold;
   font-style: italic;
   font-display: swap;
 }
 
-.page-container{
+.filter {
+  display: flex;
+  flex-direction: column;
+  /* height: 100%; */
+  width: 40%;
+  max-width: 245px;
+  /* background-color: orange; */
+}
+
+.filter__content {
+  margin: 20px;
+}
+
+/* .filter__content label {
+  margin-bottom: 5px;
+}
+
+.filter__content input{
+  margin-bottom: 10px;
+  padding: 5px;
+} */
+
+.no-results,
+.loading {
+  width: 100%;
+  margin: auto;
+}
+
+.results {
+  width: 100%;
+  /* margin: auto; */
+  position: relative;
+}
+
+.results-text {
+  display: flex;
+  /* position: absolute; */
+  /* top: 0; */
+}
+
+.results-text h3 {
+  margin-right: 30px;
+}
+
+.results-text button {
+  height: 30px;
+  padding: 5px;
+}
+
+/* .reset-button {
+
+} */
+
+.browse-container {
+  display: flex;
   max-width: 1350px;
   margin: 20px auto 40px auto;
   padding: 20px 50px;
   height: 100%;
   min-height: 100vh;
-}
-
-
-.browse-container{
-  max-width: 100%;
   /* margin: 20px auto 40px auto;
   padding: 20px 50px;
   height: 100%;
@@ -35,7 +83,20 @@
   /* padding: 40px 50px; */
 }
 
-.browse-cards{
+.browse-content{
+  display: flex;
+  direction: column;
+  flex-wrap: wrap;
+}
+
+.filter-helper {
+  display: flex;
+  width: 100%;
+  margin: 20px;
+  height: 30px;
+}
+
+.browse-cards {
   display: flex;
   flex-wrap: wrap;
   /* background-color: blue; */
@@ -44,26 +105,51 @@
   max-width: 100%;
 }
 
-.browse-card{
+.results-container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.browse-card {
   display: flex;
   flex-direction: column;
   background-color: white;
   width: 261.25px;
   height: 365px;
   /* margin: 15px; */
-  border: 1px solid rgba(0,0,0,.15);
+  border: 1px solid rgba(0, 0, 0, 0.15);
   max-width: 100%;
 }
 
-.browse-card__image img{
+.browse-card__image {
+  height: 50%;
+}
+
+.browse-card__image img {
+  min-width: 100%;
+  min-height: 100%;
   max-width: 100%;
+  max-height: 100%;
 }
 
 .browse-card__text {
   color: black;
   padding: 0.75rem;
+  height: 50%;
 }
 
-.browse-card__title{
+.browse-card__title {
   margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .results-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .browse-cards{
+    margin-bottom: auto;
+  }
 }

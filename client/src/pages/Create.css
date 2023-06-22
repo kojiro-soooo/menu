@@ -23,14 +23,5 @@
 }
 
 .recipe-form h3 {
-  margin: 5px auto;
-}
-
-.recipe-form label {
-  margin-bottom: 5px;
-}
-
-.recipe-form input,textarea {
-  margin-bottom: 10px;
-  padding: 5px;
+  margin: 0px auto 20px auto;
 }

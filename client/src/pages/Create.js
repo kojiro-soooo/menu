@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom';
 const Create = () => {
   const [title, setTitle] = useState();
   const [description, setDescription] = useState();
+  const [country, setCountry] = useState();
   const [ingredients, setIngredients] = useState();
   const [instructions, setInstructions] = useState();
   const [totalTime, setTotalTime] = useState();
@@ -24,6 +25,7 @@ const Create = () => {
     const newRecipe = {
       title: title,
       description: description,
+      country: country,
       ingredients: ingredients,
       instructions: instructions,
       totalTime: totalTime,
@@ -57,6 +59,8 @@ const Create = () => {
           <input onChange={(event) => {setTitle(event.target.value)}} placeholder="My mom's mapo tofu" required></input>
           <label>Description: </label>
           <input onChange={(event) => {setDescription(event.target.value)}} placeholder="Share the story behind your recipe!"></input>
+          <label>Country: </label>
+          <input onChange={(event) => {setCountry(event.target.value.toLowerCase())}} placeholder="From which country does your recipe originate?" required></input>
           <label>Ingredients (separated with commas): </label>
           <textarea onChange={(event) => {setIngredients(event.target.value)}} rows="10" placeholder="1 cup cooking wine, 300g minced pork, 400g tofu..." required></textarea>
           <label>Instructions: </label>

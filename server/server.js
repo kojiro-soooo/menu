@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+require('dotenv').config()
 
 const router = require("./routes/api");
 const connectDB = require("./config/db");
@@ -21,6 +22,6 @@ app.use(express.json());
 // API
 app.use('/api',router);
 
-app.listen(5050, () => {
+app.listen(process.env.PORT || 5050, () => {
   console.log("Server is running at port 5050");
 });

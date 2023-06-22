@@ -7,7 +7,6 @@ import "./Home.css";
 
 const Home = () => {
   const [topFive, setTopFive] = useState();
-  
 
   useEffect(() => {
     const getTopFive = async () => {
@@ -18,6 +17,10 @@ const Home = () => {
       setTopFive(json);
     };
     getTopFive();
+  }, []);
+
+  useEffect(() => {
+    window.scrollTo(0,0); 
   }, []);
 
   const autoplay = useRef(Autoplay({ delay: 4000 }));
@@ -32,8 +35,8 @@ const Home = () => {
           <Carousel
             withIndicators
             height="100%"
-            slideSize="65%"
-            slideGap="md"
+            slideSize="55%"
+            slideGap="5%"
             controlSize={50}
             loop
             align="center"
@@ -79,7 +82,8 @@ const Home = () => {
               Countries.map((country) => (
                 <Link className="card"
                   style={{ textDecoration: "none" }}
-                  to={`/browse/${country.country}`}
+                  to={`/browse`}
+                  state={{country: country.country.toLowerCase()}}
                 >
                   <div className="country-card">
                     <div className="country-card__image">
