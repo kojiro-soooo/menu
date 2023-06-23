@@ -59,7 +59,7 @@ const Recipes = mongoose.model("Recipes", RecipesSchema)
 
 module.exports = Recipes;
 
-//Allowed types:
+//Allowed types in mongoDB:
 // String
 // Number
 // Date
