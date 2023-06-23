@@ -19,14 +19,12 @@ const Recipe = () => {
         method: "GET",
       });
       const json = await response.json();
-      // console.log(json);
       setRecipe(json);
     };
     getRecipe();
   }, []);
 
   const handleDelete = async () => {
-    // console.log(id)
     await fetch(`${backend_url}/browse/recipes/${id}`, {
       method: "DELETE",
     });
@@ -85,7 +83,12 @@ const Recipe = () => {
         </div>
         <div className="editor">
           <button className="edit">Edit Recipe</button>
-          <button className="delete" onClick={()=> {handleDelete()}}>
+          <button
+            className="delete"
+            onClick={() => {
+              handleDelete();
+            }}
+          >
             Delete Recipe
           </button>
         </div>

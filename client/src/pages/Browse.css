@@ -83,7 +83,7 @@
   /* padding: 40px 50px; */
 }
 
-.browse-content{
+.browse-content {
   display: flex;
   direction: column;
   flex-wrap: wrap;
@@ -105,7 +105,7 @@
   max-width: 100%;
 }
 
-.results-container{
+.results-container {
   height: 100%;
   width: 100%;
   display: flex;
@@ -162,7 +162,7 @@
     flex-direction: column;
   }
 
-  .browse-cards{
+  .browse-cards {
     margin-bottom: auto;
   }
 }

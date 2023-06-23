@@ -4,6 +4,7 @@ import { backend_url } from "../config";
 import { useNavigate } from "react-router-dom";
 
 const Create = () => {
+  // States for managing data for each field in form
   const [title, setTitle] = useState();
   const [description, setDescription] = useState();
   const [country, setCountry] = useState();
@@ -15,7 +16,6 @@ const Create = () => {
   const [taste, setTaste] = useState();
   const [complexity, setComplexity] = useState();
   const [tags, setTags] = useState();
-  // const [imageUrl, setImageUrl] = useState();
   const navigate = useNavigate();
 
   // scroll to top on first render
@@ -25,9 +25,6 @@ const Create = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    console.log("before fetch");
-
     const newRecipe = {
       title: title,
       description: description,
@@ -40,9 +37,10 @@ const Create = () => {
       taste: taste,
       complexity: complexity,
       tags: tags,
-      imageURL: 'https://fakeimg.pl/779x519?text=Add+an+image!', // placeholder image
+      imageURL: "https://fakeimg.pl/779x519?text=Add+an+image!", // placeholder image
     };
 
+    // create a new recipe document in database
     await fetch(`${backend_url}/create`, {
       method: "POST",
       headers: {
@@ -56,6 +54,7 @@ const Create = () => {
         console.log(error);
       });
 
+    // redirect after function is executed
     navigate("/");
   };
 

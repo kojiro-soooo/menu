@@ -1,6 +1,7 @@
 import { React, useState, useEffect } from "react";
 import { backend_url } from "../config";
 import { Link, useLocation } from "react-router-dom";
+import {RecipeCard} from "../components/RecipeCard";
 import "./Browse.css";
 
 const Browse = () => {
@@ -12,14 +13,6 @@ const Browse = () => {
     location.state ? location.state.country : ""
   );
   const [search, setSearch] = useState(country);
-
-  const capitalize = (str) => {
-    const words = str.split(" ");
-    for (let i = 0; i < words.length; i++) {
-      words[i] = words[i][0].toUpperCase() + words[i].substr(1);
-    }
-    return words.join(" ");
-  };
 
   // scroll to top on first render
   useEffect(() => {
@@ -60,6 +53,7 @@ const Browse = () => {
     setFilteredResult(filtered);
   }, [allRecipes]);
 
+  // resets search
   const handleReset = () => {
     setSearch("");
   };
@@ -89,7 +83,6 @@ const Browse = () => {
         <div className="results-container">
           <div className="filter">
             <div className="filter__content">
-              {/* <h3>Filter : </h3> */}
               <form>
                 <label>Filter by country:</label>
                 <input
@@ -102,68 +95,7 @@ const Browse = () => {
             </div>
           </div>
           <div className="browse-cards">
-            {loading === true ? (
-              <p className="loading">Loading...</p>
-            ) : search ? (
-              filteredResult.length === 0 ? (
-                <p className="no-results">
-                  There aren't any recipes from that country... yet!
-                  <br></br>Be the first one to add a recipe by clicking "Create"
-                </p>
-              ) : (
-                filteredResult &&
-                filteredResult.map((recipe) => (
-                  <Link
-                    className="card"
-                    style={{ textDecoration: "none" }}
-                    to={`/browse/recipes/${recipe._id}`}
-                  >
-                    <div className="browse-card">
-                      <div className="browse-card__image">
-                        <img src={recipe.imageURL}></img>
-                      </div>
-                      <div className="browse-card__text">
-                        <h3 className="browse-card__title">{recipe.title}</h3>
-                        <p id="browse-card__country">
-                          {capitalize(recipe.country)}
-                        </p>
-                        <div className="browse-card__details">
-                          <p>Authenticity: {recipe.authenticity}</p>
-                          <p>Taste: {recipe.taste}</p>
-                          <p>Complexity: {recipe.complexity}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </Link>
-                ))
-              )
-            ) : (
-              allRecipes &&
-              allRecipes.map((recipe) => (
-                <Link
-                  className="card"
-                  style={{ textDecoration: "none" }}
-                  to={`/browse/recipes/${recipe._id}`}
-                >
-                  <div className="browse-card">
-                    <div className="browse-card__image">
-                      <img src={recipe.imageURL}></img>
-                    </div>
-                    <div className="browse-card__text">
-                      <h3 className="browse-card__title">{recipe.title}</h3>
-                      <p id="browse-card__country">
-                        {capitalize(recipe.country)}
-                      </p>
-                      <div className="browse-card__details">
-                        <p>Authenticity: {recipe.authenticity}</p>
-                        <p>Taste: {recipe.taste}</p>
-                        <p>Complexity: {recipe.complexity}</p>
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              ))
-            )}
+            <RecipeCard loading={loading} search={search} filteredResult={filteredResult} allRecipes={allRecipes}/>
           </div>
         </div>
       </div>

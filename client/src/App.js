@@ -3,7 +3,6 @@ import Browse from "./pages/Browse";
 import Create from "./pages/Create";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
-import Feedback from "./pages/Feedback";
 import Recipe from "./pages/Recipe";
 import About from "./pages/About";
 import Footer from "./components/Footer"
@@ -20,7 +19,6 @@ function App() {
           <Route path="/about" element={<About />}></Route>
           <Route path="/browse" element={<Browse />}></Route>
           <Route path="/create" element={<Create />}></Route>
-          {/* <Route path="/feedback" element={<Feedback />}></Route> */}
           <Route path="/browse/recipes/:id" element={<Recipe />}></Route>
         </Routes>
         <Footer />
