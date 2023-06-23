@@ -89,7 +89,9 @@ const Create = () => {
           <label>Ingredients (separated with commas): </label>
           <textarea
             onChange={(event) => {
-              setIngredients(event.target.value);
+              setIngredients(() => {
+                return event.target.value.split(",");
+              });
             }}
             rows="10"
             placeholder="1 cup cooking wine, 300g minced pork, 400g tofu..."
@@ -98,7 +100,9 @@ const Create = () => {
           <label>Instructions: </label>
           <textarea
             onChange={(event) => {
-              setInstructions(event.target.value);
+              setInstructions(() => {
+                return event.target.value.split(",");
+              });
             }}
             rows="10"
             placeholder="1. Cut tofu into 1-inch cubes 2. Heat vegetable oil on a pan on medium heat..."

@@ -11,7 +11,7 @@ import "./index.css";
 function App() {
   return (
     <div className="App">
-      <Router >
+      <Router>
         <div className="app-container">
         <Navbar />
         <Routes>
