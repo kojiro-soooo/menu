@@ -82,7 +82,7 @@ const Recipe = () => {
           </div>
         </div>
         <div className="editor">
-          <button className="edit">Edit Recipe</button>
+          {/* <button className="edit">Edit Recipe</button>
           <button
             className="delete"
             onClick={() => {
@@ -90,7 +90,7 @@ const Recipe = () => {
             }}
           >
             Delete Recipe
-          </button>
+          </button> */}
         </div>
       </div>
     )
