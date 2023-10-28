@@ -2,6 +2,11 @@ import express from "express"
 import RecipesModel  from "../models/RecipesSchema.js"
 import multer from "multer"; //https://github.com/expressjs/multer
 
+const bucketName = process.env.BUCKET_NAME
+const bucketRegion = process.env.BUCKET_REGION
+const accessKey = process.env.ACCESS_KEY
+const secretAccessKey = process.env.SECRET_ACCESS_KEY
+
 // store images in memory (RAM)
 const storage = multer.memoryStorage()
 const upload = multer({ storage: storage });
@@ -15,8 +20,14 @@ import {
 } from "@aws-sdk/client-s3";
 
 const router = express.Router();
-const s3Client = new S3Client({});
-const bucketName = 'authentic-recipes'
+const s3Client = new S3Client({
+    credentials: {
+        accessKeyId: accessKey,
+        secretAccessKey: secretAccessKey
+    },
+    region: bucketRegion
+});
+// const bucketName = 'authentic-recipes'
 
 // create a new recipe
 router.post("/create", 
