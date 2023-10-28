@@ -63,7 +63,7 @@ const Create = () => {
     
 
     // create a new recipe document in database
-    await fetch(`/create`, { //when testing locally, remove the url part of ${backend_url}/create
+    await fetch(`backend_url/create`, { //when testing locally, remove the url part of ${backend_url}/create
       method: "POST",
     //   headers: {
     //     "Content-Type": "multipart/form-data",
