@@ -15,7 +15,7 @@ This website a work-in-progress with the intent of accomplishing the goals liste
 
 ### Why did I choose MERN, Heroku, Netlify, and AWS?
 
-MERN (*M*ongodDB, *E*xpress, *R*eact, *N*ode) is a commonly used technology stack for building full-stack websites. For this particular project, I chose to use the MERN stack because of the following reasons:
+MERN (**M**ongodDB, **E**xpress, **R**eact, **N**ode) is a commonly used technology stack for building full-stack websites. For this particular project, I chose to use the MERN stack because of the following reasons:
 
 - Database flexibility, scalability, and speed: As a document-oriented NoSQL database, MongoDB allows for the database schema to continously evolve based on changing data requirements. Given that this project is very much still in its early stages with new ideas and requirements coming up frequently, being able to change the schema as needed was an important requirement for choosing a database. 
 - With the ultimate goal of this project being a website with a significant number of users, high read and write capability (for creating and browsing recipes), horizontal scalability for quick growth (along with high availiability), and auto-scaling were features that made MongoDB the winning choice. While some or all of these features do exist in alternative database choices as well, MongoDB proved to be straightforward in setup and management.
