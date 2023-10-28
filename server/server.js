@@ -19,7 +19,7 @@ const app = express();
 connectDB();
 
 // cors: enables requests from all sources
-app.use(cors({origin: true, credentials: true}));
+app.use(cors({origin: true}));
 
 // parse incoming requests as JSON, making data readily available via req.body
 app.use(express.json());
