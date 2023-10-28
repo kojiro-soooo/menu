@@ -1,4 +1,4 @@
-# [Work in progress] An e-commerce application for foodies around the world who want to share, vote on, and shop for authentic recipes, all in one place.
+# An e-commerce application for foodies around the world who want to share, vote on, and shop for authentic recipes, all in one place.
 
 https://authentic-recipes.netlify.app/
 
