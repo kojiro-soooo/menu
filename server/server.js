@@ -1,10 +1,18 @@
-const express = require("express");
-const mongoose = require("mongoose");
-const cors = require("cors");
-require('dotenv').config()
+// const express = require("express");
+// const mongoose = require("mongoose");
+// const cors = require("cors");
+// require('dotenv').config()
 
-const router = require("./routes/api");
-const connectDB = require("./config/db");
+import express from "express";
+import mongoose from "mongoose";
+import cors from "cors"
+import "dotenv/config.js";
+import router from "./routes/api.js"
+import connectDB from "./config/db.js";
+
+
+// const router = require("./routes/api");
+// const connectDB = require("./config/db");
 const app = express();
 
 // connect to database

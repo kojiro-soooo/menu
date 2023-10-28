@@ -1,18 +1,50 @@
-const express = require("express");
-const RecipesModel = require("../models/RecipesSchema");
+import express from "express"
+import RecipesModel  from "../models/RecipesSchema.js"
+import multer from "multer"; //https://github.com/expressjs/multer
 
-router = express.Router();
+// store images in memory (RAM)
+const storage = multer.memoryStorage()
+const upload = multer({ storage: storage });
+
+import {
+    S3Client,
+    PutObjectCommand,
+    DeleteObjectCommand,
+    GetObjectCommand,
+    paginateListObjectsV2,
+} from "@aws-sdk/client-s3";
+
+const router = express.Router();
+const s3Client = new S3Client({});
+const bucketName = 'authentic-recipes'
 
 // create a new recipe
-router.post("/create", async (req, res) => {
-  const recipe = new RecipesModel(req.body);
+router.post("/create", 
+            upload.single('image'), // string has to match name of file field
+            async (req, res) => {
 
-  try {
-    await recipe.save();
-    res.send(recipe);
-  } catch (error) {
-    res.status(500).send(error);
-  }
+    const recipe = RecipesModel(req.body)
+    console.log(recipe)
+
+    try {
+        // store image file in S3
+        const params = {
+            Bucket: bucketName,
+            Key: req.body.id,
+            Body: req.file.buffer,
+            ContentType: req.file.mimetype,
+        }
+        const command = new PutObjectCommand(params);
+        await s3Client.send(command);
+
+        // .save will save a record of the data in the database
+        await recipe.save();
+        // .send is used to send an HTTP response. In this case, it's just the recipe object that was saved.
+        res.send(recipe);
+    //     console.log("im over here")
+    } catch (error) {
+        res.status(500).send(error);
+    }
 });
 
 // get all recipes
@@ -78,4 +110,5 @@ router.delete("/admin-delete", async (req, res) => {
   }
 });
 
-module.exports = router;
+// module.exports = router;
+export default router

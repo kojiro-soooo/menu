@@ -1,7 +1,8 @@
-import { React, useState, useEffect } from "react";
+import { React, useState, useEffect} from "react";
 import "./Create.css";
 import { backend_url } from "../config";
 import { useNavigate } from "react-router-dom";
+const { v4: uuidv4} = require('uuid');
 
 const Create = () => {
   // States for managing data for each field in form
@@ -16,6 +17,7 @@ const Create = () => {
   const [taste, setTaste] = useState();
   const [complexity, setComplexity] = useState();
   const [tags, setTags] = useState();
+  const [image, setImage] = useState();
   const navigate = useNavigate();
 
   // scroll to top on first render
@@ -25,36 +27,59 @@ const Create = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const newRecipe = {
-      title: title,
-      description: description,
-      country: country,
-      ingredients: ingredients,
-      instructions: instructions,
-      totalTime: totalTime,
-      servings: servings,
-      authenticity: authenticity,
-      taste: taste,
-      complexity: complexity,
-      tags: tags,
-      imageURL: "https://fakeimg.pl/779x519?text=Add+an+image!", // placeholder image
-    };
+    
+    // to debug FormData, use formData.entries()
+    const formData = new FormData();
+    formData.append('id', uuidv4()); // need uuid to create key to correspond to image in S3
+    formData.append('title', title);
+    formData.append('description', description);
+    formData.append('country', country);
+    formData.append('ingredients', ingredients);
+    formData.append('instructions', instructions);
+    formData.append('totalTime', totalTime);
+    formData.append('servings', servings);
+    formData.append('authenticity', authenticity);
+    formData.append('taste', taste);
+    formData.append('complexity', complexity);
+    formData.append('tags', tags);
+    formData.append('image', image);
+    
+    // const newRecipe = {
+    //     id: uuidv4(), // need uuid to create key to correspond to image in S3
+    //     title: title,
+    //     description: description,
+    //     country: country,
+    //     ingredients: ingredients,
+    //     instructions: instructions,
+    //     totalTime: totalTime,
+    //     servings: servings,
+    //     authenticity: authenticity,
+    //     taste: taste,
+    //     complexity: complexity,
+    //     tags: tags,
+    //     image: image,
+    // //   imageURL: "https://fakeimg.pl/779x519?text=Add+an+image!", // placeholder image
+    // };
+    
 
     // create a new recipe document in database
-    await fetch(`${backend_url}/create`, {
+    await fetch(`/create`, { //when testing locally, remove the url part of ${backend_url}/create
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(newRecipe),
+    //   headers: {
+    //     "Content-Type": "multipart/form-data",
+    //   },
+      body: formData
+    //   body: JSON.stringify(newRecipe),
     })
-      .then((response) => response.json())
-      .then((res) => console.log(res))
+        .then((response) => {console.log(response)})
+    //   .then((response) => response.json())
+    //   .then((res) => console.log(res))
       .catch((error) => {
         console.log(error);
       });
 
     // redirect after function is executed
+    console.log("hi?")
     navigate("/");
   };
 
@@ -63,6 +88,17 @@ const Create = () => {
       <div className="create-recipe-card">
         <form className="recipe-form" onSubmit={handleSubmit}>
           <h3>Share your very own recipe with the world!</h3>
+
+            <h1>Upload an image of your recipe</h1>
+            <div className="mb-1">
+                Image <span className="font-css top">*</span>
+                <div className="">
+                    <input onChange={(event) => {
+                        setImage(event.target.files[0])
+                    }} type="file" id="file-input" name="ImageStyle"/>
+                </div>
+            </div>
+
           <label>Recipe Name: </label>
           <input
             onChange={(event) => {
