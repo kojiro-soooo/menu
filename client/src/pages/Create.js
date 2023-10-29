@@ -88,124 +88,122 @@ const Create = () => {
       <div className="create-recipe-card">
         <form className="recipe-form" onSubmit={handleSubmit}>
           <h3>Share your very own recipe with the world!</h3>
-
-            <h1>Upload an image of your recipe</h1>
-            <div className="mb-1">
-                Image <span className="font-css top">*</span>
-                <div className="">
-                    <input onChange={(event) => {
-                        setImage(event.target.files[0])
-                    }} type="file" id="file-input" name="ImageStyle"/>
+          <label>Upload An Image Of Your Recipe</label>
+            <input 
+                onChange={(event) => {
+                setImage(event.target.files[0])
+                }} 
+                type="file"
+                id="file-input"
+                name="ImageStyle"
+            ></input>
+            <label>Recipe Name: </label>
+            <input
+                onChange={(event) => {
+                setTitle(event.target.value);
+                }}
+                placeholder="Oyako Donburi"
+                required
+            ></input>
+            <label>Description: </label>
+            <input
+                onChange={(event) => {
+                setDescription(event.target.value);
+                }}
+                placeholder="Share the story behind your recipe!"
+            ></input>
+            <label>Country: </label>
+            <input
+                onChange={(event) => {
+                setCountry(event.target.value.toLowerCase());
+                }}
+                placeholder="From which country does your recipe originate?"
+                required
+            ></input>
+            <label>Ingredients (separated with commas): </label>
+            <textarea
+                onChange={(event) => {
+                setIngredients(() => {
+                    return event.target.value.split(",");
+                });
+                }}
+                rows="10"
+                placeholder="1 cup cooking wine, 300g minced pork, 400g tofu..."
+                required
+            ></textarea>
+            <label>Instructions: </label>
+            <textarea
+                onChange={(event) => {
+                setInstructions(() => {
+                    return event.target.value.split(",");
+                });
+                }}
+                rows="10"
+                placeholder="1. Cut tofu into 1-inch cubes 2. Heat vegetable oil on a pan on medium heat..."
+                required
+            ></textarea>
+            <label>Total Time To Cook (minutes): </label>
+            <input
+                type="number"
+                onChange={(event) => {
+                setTotalTime(event.target.value);
+                }}
+                placeholder="30"
+                required
+            ></input>
+            <label>Servings: </label>
+            <input
+                type="number"
+                onChange={(event) => {
+                setServings(event.target.value);
+                }}
+                placeholder="2"
+                required
+            ></input>
+            <div className="ratings">
+                <div className="ratings__field">
+                <label>Authenticity: </label>
+                <input
+                    type="number"
+                    onChange={(event) => {
+                    setAuthenticity(event.target.value);
+                    }}
+                    placeholder="5"
+                    required
+                ></input>
+                </div>
+                <div className="ratings__field">
+                <label>Taste: </label>
+                <input
+                    type="number"
+                    onChange={(event) => {
+                    setTaste(event.target.value);
+                    }}
+                    placeholder="5"
+                    required
+                ></input>
+                </div>
+                <div className="ratings__field">
+                <label>Complexity: </label>
+                <input
+                    type="number"
+                    onChange={(event) => {
+                    setComplexity(event.target.value);
+                    }}
+                    placeholder="3"
+                    required
+                ></input>
                 </div>
             </div>
-
-          <label>Recipe Name: </label>
-          <input
-            onChange={(event) => {
-              setTitle(event.target.value);
-            }}
-            placeholder="Oyako Donburi"
-            required
-          ></input>
-          <label>Description: </label>
-          <input
-            onChange={(event) => {
-              setDescription(event.target.value);
-            }}
-            placeholder="Share the story behind your recipe!"
-          ></input>
-          <label>Country: </label>
-          <input
-            onChange={(event) => {
-              setCountry(event.target.value.toLowerCase());
-            }}
-            placeholder="From which country does your recipe originate?"
-            required
-          ></input>
-          <label>Ingredients (separated with commas): </label>
-          <textarea
-            onChange={(event) => {
-              setIngredients(() => {
-                return event.target.value.split(",");
-              });
-            }}
-            rows="10"
-            placeholder="1 cup cooking wine, 300g minced pork, 400g tofu..."
-            required
-          ></textarea>
-          <label>Instructions: </label>
-          <textarea
-            onChange={(event) => {
-              setInstructions(() => {
-                return event.target.value.split(",");
-              });
-            }}
-            rows="10"
-            placeholder="1. Cut tofu into 1-inch cubes 2. Heat vegetable oil on a pan on medium heat..."
-            required
-          ></textarea>
-          <label>Total Time To Cook (minutes): </label>
-          <input
-            type="number"
-            onChange={(event) => {
-              setTotalTime(event.target.value);
-            }}
-            placeholder="30"
-            required
-          ></input>
-          <label>Servings: </label>
-          <input
-            type="number"
-            onChange={(event) => {
-              setServings(event.target.value);
-            }}
-            placeholder="2"
-            required
-          ></input>
-          <div className="ratings">
-            <div className="ratings__field">
-              <label>Authenticity: </label>
-              <input
-                type="number"
+            <label>Tags (separate with commas): </label>
+            <input
+                type="text"
                 onChange={(event) => {
-                  setAuthenticity(event.target.value);
+                setTags(event.target.value);
                 }}
-                placeholder="5"
-                required
-              ></input>
-            </div>
-            <div className="ratings__field">
-              <label>Taste: </label>
-              <input
-                type="number"
-                onChange={(event) => {
-                  setTaste(event.target.value);
-                }}
-                placeholder="5"
-                required
-              ></input>
-            </div>
-            <div className="ratings__field">
-              <label>Complexity: </label>
-              <input
-                type="number"
-                onChange={(event) => {
-                  setComplexity(event.target.value);
-                }}
-                placeholder="3"
-                required
-              ></input>
-            </div>
-          </div>
-          <label>Tags (separate with commas): </label>
-          <input
-            type="text"
-            onChange={(event) => {
-              setTags(event.target.value);
-            }}
-            placeholder="noodles, comforting, warm, italian"
-          ></input>
-          <button type="submit">Submit!</button>
+                placeholder="noodles, comforting, warm, italian"
+            ></input>
+            <button type="submit">Submit!</button>
         </form>
       </div>
     </div>
