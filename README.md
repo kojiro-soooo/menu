@@ -32,6 +32,7 @@ I faced a lot of challenges (and still am) while building the project so it's di
 
 Some future features include:
 - User authentication
+- Integrate TypeScript
 - Displaying nutrition information for recipes using some public API
 - An interactive map of all countries in the world that allows users to search recipes from the map
 - An easier or more interactive way for users to add recipes
