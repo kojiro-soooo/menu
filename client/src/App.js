@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import Recipe from "./pages/Recipe";
 import About from "./pages/About";
 import Footer from "./components/Footer"
+import Profile from "./pages/Profile";
 import "./index.css";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="/browse" element={<Browse />}></Route>
           <Route path="/create" element={<Create />}></Route>
           <Route path="/browse/recipes/:id" element={<Recipe />}></Route>
+          <Route path="/profile" element={<Profile/>}></Route>
         </Routes>
         <Footer />
         </div>
