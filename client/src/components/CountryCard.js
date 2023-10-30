@@ -15,7 +15,7 @@ export const CountryCard = () => {
           >
             <div className="country-card">
               <div className="country-card__image">
-                <img src={country.url}></img>
+                <img src={country.url} alt=""></img>
               </div>
               <div className="country-card__text">
                 <h2 className="country-card__title">{country.country}</h2>

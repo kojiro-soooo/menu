@@ -6,7 +6,7 @@ import "./Recipe.css";
 const Recipe = () => {
   const [recipe, setRecipe] = useState(null);
   const { id } = useParams();
-  const navigate = useNavigate();
+  const navigate = useNavigate(); 
 
   // scroll to top on first render
   useEffect(() => {
@@ -15,14 +15,14 @@ const Recipe = () => {
 
   useEffect(() => {
     const getRecipe = async () => {
-      const response = await fetch(`${backend_url}/browse/recipes/${id}`, {
-        method: "GET",
-      });
-      const json = await response.json();
-      setRecipe(json);
-    };
+        const response = await fetch(`${backend_url}/browse/recipes/${id}`, {
+          method: "GET",
+        });
+        const json = await response.json();
+        setRecipe(json);
+      };
     getRecipe();
-  }, []);
+  });
 
   const handleDelete = async () => {
     await fetch(`${backend_url}/browse/recipes/${id}`, {
@@ -77,7 +77,7 @@ const Recipe = () => {
               <p>Complexity: {recipe.complexity}</p>
             </div>
             <div className="recipe-img">
-              <img src={recipe.imageURL}></img>
+              <img src={recipe.imageURL} alt={recipe.title}></img>
             </div>
           </div>
         </div>
