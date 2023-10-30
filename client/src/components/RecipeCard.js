@@ -30,7 +30,7 @@ export const RecipeCard = ({ loading, search, filteredResult, allRecipes }) => {
             >
               <div className="browse-card">
                 <div className="browse-card__image">
-                  <img src={recipe.imageURL}></img>
+                  <img src={recipe.imageURL} alt={recipe.title}></img>
                 </div>
                 <div className="browse-card__text">
                   <h3 className="browse-card__title">{recipe.title}</h3>
@@ -55,7 +55,7 @@ export const RecipeCard = ({ loading, search, filteredResult, allRecipes }) => {
           >
             <div className="browse-card">
               <div className="browse-card__image">
-                <img src={recipe.imageURL}></img>
+                <img src={recipe.imageURL} alt={recipe.title}></img>
               </div>
               <div className="browse-card__text">
                 <h3 className="browse-card__title">{recipe.title}</h3>

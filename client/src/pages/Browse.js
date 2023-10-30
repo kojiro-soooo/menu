@@ -1,6 +1,6 @@
 import { React, useState, useEffect } from "react";
 import { backend_url } from "../config";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import {RecipeCard} from "../components/RecipeCard";
 import "./Browse.css";
 
@@ -35,9 +35,7 @@ const Browse = () => {
   // update filter results whenever search text is updated
   useEffect(() => {
     const filtered = allRecipes.filter((recipe) => {
-      {
-        return recipe.country.startsWith(search.toLowerCase());
-      }
+      return recipe.country.startsWith(search.toLowerCase());
     });
     setFilteredResult(filtered);
   }, [search]);
@@ -45,10 +43,8 @@ const Browse = () => {
   // wait for recipes data to be fetched, then use country data from home page to update filter results
   useEffect(() => {
     const filtered = allRecipes.filter((recipe) => {
-      {
         setLoading(false);
         return recipe.country.startsWith(search.toLowerCase());
-      }
     });
     setFilteredResult(filtered);
   }, [allRecipes]);

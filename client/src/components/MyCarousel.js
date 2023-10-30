@@ -37,7 +37,7 @@ export const MyCarousel = ({ topFive }) => {
             >
               <div className="carousel__slide">
                 <h2 className="carousel__title">{recipe.title}</h2>
-                <img className="carousel__img" src={recipe.imageURL}></img>
+                <img className="carousel__img" src={recipe.imageURL} alt={recipe.title}></img>
               </div>
             </Link>
           </Carousel.Slide>
