@@ -35,7 +35,10 @@ function App() {
                             isAuthenticated={isAuthenticated}
                             isLoading={isLoading}
                             />}></Route>
-                        <Route path="/browse/recipes/:id" element={<Recipe />}></Route>
+                        <Route path="/browse/recipes/:id" element={<Recipe 
+                            userFullName={user.name}
+                            userId={user.sub}
+                            />}></Route>
                         <Route path="/profile/:id" element={<Profile
                             userFullName={user.name}
                             userEmail={user.email}

@@ -11,6 +11,8 @@ const secretAccessKey = process.env.SECRET_ACCESS_KEY
 const storage = multer.memoryStorage()
 const upload = multer({ storage: storage });
 
+// to commit changes, run git subtree push --prefix server heroku master
+
 import {
     S3Client,
     PutObjectCommand,
