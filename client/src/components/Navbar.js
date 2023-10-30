@@ -3,18 +3,15 @@ import Logo from "../images/authentic-recipes-high-resolution-logo-color-on-tran
 import HamburgerMenu from "../images/menu.png";
 import LoginButton  from "../components/Login";
 import LogoutButton from "../components/Logout";
-import { useAuth0 } from "@auth0/auth0-react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 
-const Navbar = () => {
+const Navbar = ( {userFullName, userId, isLoading, isAuthenticated} ) => {
     const [navBar, setNavBar] = useState(false);
 
     const toggleNavBar = () => {
         setNavBar(!navBar);
     };
-
-    const { user, isAuthenticated, isLoading } = useAuth0();
 
     if (isLoading) {
         return <div>Loading...</div>;
@@ -51,7 +48,7 @@ const Navbar = () => {
                             <LogoutButton></LogoutButton>
                         </li>
                         <li>
-                            <NavLink to="/profile">{user.name}</NavLink>
+                            <NavLink to={`/profile/${userId}`}>{userFullName}</NavLink>
                         </li>
                         {/* <li>
                         <NavLink to="/feedback">Feedback</NavLink>
@@ -83,9 +80,9 @@ const Navbar = () => {
                         <li>
                         <NavLink to="/browse">Browse</NavLink>
                         </li>
-                        <li>
+                        {/* <li>
                         <NavLink to="/create">Create</NavLink>
-                        </li>
+                        </li> */}
                         <li>
                             <LoginButton></LoginButton>
                         </li>

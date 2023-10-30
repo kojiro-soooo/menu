@@ -41,7 +41,7 @@ router.post("/create",
         // store image file in S3
         const params = {
             Bucket: bucketName,
-            Key: req.body.id,
+            Key: req.body.recipeId,
             Body: req.file.buffer,
             ContentType: req.file.mimetype,
         }
@@ -68,6 +68,20 @@ router.get("/browse", async (req, res) => {
     res.status(500).send(error);
   }
 });
+
+// get all recipes for given user id
+router.get("/profile/:id", async (req, res) => {
+    const userId = req.params.id
+    console.log(userId)
+
+    const userRecipes = await RecipesModel.find({"userId":userId})
+
+    try {
+        res.send(userRecipes)
+    } catch (error) {
+        res.status(500).send(error)
+    }
+})
 
 // get recipe by id
 router.get("/browse/recipes/:id", async (req, res) => {

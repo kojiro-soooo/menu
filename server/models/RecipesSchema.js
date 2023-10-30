@@ -2,9 +2,13 @@ import mongoose from "mongoose"
 // const mongoose = require("mongoose");
 
 const RecipesSchema = new mongoose.Schema({
-    id: {
+    recipeId: {
         type: String,
         required: true,
+    },
+    userId: {
+        type:String,
+        requireD: true,
     },
     title: {
         type: String,
