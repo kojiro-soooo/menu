@@ -18,8 +18,9 @@ import {
     PutObjectCommand,
     DeleteObjectCommand,
     GetObjectCommand,
-    paginateListObjectsV2,
+    ListObjectsV2Command
 } from "@aws-sdk/client-s3";
+import { getSignedUrl } from "@aws-sdk/s3-request-presigner"
 
 const router = express.Router();
 const s3Client = new S3Client({
@@ -62,13 +63,24 @@ router.post("/create",
 
 // get all recipes
 router.get("/browse", async (req, res) => {
-  const allRecipes = await RecipesModel.find({});
+    const allRecipes = await RecipesModel.find({});
 
-  try {
-    res.send(allRecipes);
-  } catch (error) {
-    res.status(500).send(error);
-  }
+    for (const recipe of allRecipes) {
+        const getObjectParams = {
+            Bucket: bucketName,
+            Key: recipe.recipeId
+        }
+
+        const getObjectCommand = new GetObjectCommand(getObjectParams);
+        const url = await getSignedUrl(s3Client, getObjectCommand, { expiresIn: 3600});
+        recipe.imageUrl = url
+    }
+
+    try {
+        res.send(allRecipes);
+    } catch (error) {
+        res.status(500).send(error);
+    }
 });
 
 // get all recipes for given user id
@@ -87,22 +99,41 @@ router.get("/profile/:id", async (req, res) => {
 
 // get recipe by id
 router.get("/browse/recipes/:id", async (req, res) => {
-  const getRecipeById = await RecipesModel.findById(req.params.id);
-  try {
-    res.send(getRecipeById);
-  } catch (err) {
-    res.status(500).send(err);
-  }
+    const getRecipeById = await RecipesModel.findById(req.params.id);
+    const getObjectParams = {
+        Bucket: bucketName,
+        Key: getRecipeById.recipeId
+    }
+ 
+    const getObjectCommand = new GetObjectCommand(getObjectParams);
+    const url = await getSignedUrl(s3Client, getObjectCommand, { expiresIn: 3600});
+    getRecipeById.imageUrl = url
+    
+    try {
+        res.send(getRecipeById);
+    } catch (err) {
+        res.status(500).send(err);
+    }
 });
 
 // get the top 5 tastest recipes
 router.get("/", async (req, res) => {
-  const tastiestFive = await RecipesModel.find({}).sort({ taste: -1 }).limit(5);
-  try {
-    res.send(tastiestFive);
-  } catch (err) {
-    res.status(500).send(err);
-  }
+    const tastiestFive = await RecipesModel.find({}).sort({ taste: -1 }).limit(5);
+    for (const recipe of tastiestFive) {
+    const getObjectParams = {
+        Bucket: bucketName,
+        Key: recipe.recipeId
+    }
+    const getObjectCommand = new GetObjectCommand(getObjectParams);
+    const url = await getSignedUrl(s3Client, getObjectCommand, { expiresIn: 3600});
+    recipe.imageUrl = url
+    }
+
+    try {
+        res.send(tastiestFive);
+    } catch (err) {
+        res.status(500).send(err);
+    }
 });
 
 // delete a specific recipe
