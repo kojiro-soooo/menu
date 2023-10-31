@@ -15,24 +15,24 @@ const Recipe = ( {userId, userFullName} ) => {
 
   useEffect(() => {
     const getRecipe = async () => {
-        const response = await fetch(`${backend_url}/browse/recipes/${id}`, {
+        const response = await fetch(`/browse/recipes/${id}`, {
           method: "GET",
         });
         const json = await response.json();
         setRecipe(json);
       };
     getRecipe();
-  });
+  }, []);
 
   const handleDelete = async () => {
-    await fetch(`${backend_url}/browse/recipes/${id}`, {
+    await fetch(`/browse/recipes/${id}`, {
       method: "DELETE",
     });
 
     navigate("/browse");
   };
 
-  if (recipe && userId == recipe.userId) {
+  if (recipe && userId === recipe.userId) {
     return (
         <div className="recipe-container">
             <div className="recipe-book">

@@ -53,7 +53,6 @@ router.post("/create",
         await recipe.save();
         // .send is used to send an HTTP response. In this case, it's just the recipe object that was saved.
         res.send(recipe);
-    //     console.log("im over here")
     } catch (error) {
         res.status(500).send(error);
     }
@@ -84,8 +83,6 @@ router.get("/browse", async (req, res) => {
 // get all recipes for given user id
 router.get("/profile/:id", async (req, res) => {
     const userId = req.params.id
-    console.log(userId)
-
     const userRecipes = await RecipesModel.find({"userId":userId})
 
     try {
@@ -136,7 +133,6 @@ router.get("/", async (req, res) => {
 
 // delete a specific recipe
 router.delete("/browse/recipes/:id", async (req, res) => {
-  console.log(req.params.id);
   const deleteRecipe = await RecipesModel.findByIdAndDelete(req.params.id);
   try {
     res.send(deleteRecipe);

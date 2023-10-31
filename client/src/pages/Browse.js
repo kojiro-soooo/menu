@@ -7,7 +7,6 @@ import "./Browse.css";
 const Browse = () => {
   const [allRecipes, setAllRecipes] = useState([]);
   const [filteredResult, setFilteredResult] = useState([]);
-  const [loading, setLoading] = useState(true);
   const location = useLocation();
   const [country, setCountry] = useState(
     location.state ? location.state.country : ""
@@ -22,7 +21,7 @@ const Browse = () => {
   // fetch data on first render
   useEffect(() => {
     const fetchRecipes = async () => {
-      const response = await fetch(`${backend_url}/browse`, {
+      const response = await fetch(`/browse`, {
         method: "GET",
       });
       const json = await response.json();
@@ -43,7 +42,6 @@ const Browse = () => {
   // wait for recipes data to be fetched, then use country data from home page to update filter results
   useEffect(() => {
     const filtered = allRecipes.filter((recipe) => {
-        setLoading(false);
         return recipe.country.startsWith(search.toLowerCase());
     });
     setFilteredResult(filtered);
@@ -91,7 +89,11 @@ const Browse = () => {
             </div>
           </div>
           <div className="browse-cards">
-            <RecipeCard loading={loading} search={search} filteredResult={filteredResult} allRecipes={allRecipes}/>
+            <RecipeCard 
+                search={search} 
+                filteredResult={filteredResult} 
+                allRecipes={allRecipes}
+            />
           </div>
         </div>
       </div>

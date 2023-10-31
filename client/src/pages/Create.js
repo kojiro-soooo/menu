@@ -65,7 +65,7 @@ const Create = ( {userId, isAuthenticated, isLoading} ) => {
 
         // create a new recipe document in database. when testing locally, remove backend_url
         // await fetch(`${backend_url}/create`, {
-        await fetch(`${backend_url}/create`, {
+        await fetch(`/create`, {
 
         method: "POST",
         //   headers: {

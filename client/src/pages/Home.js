@@ -17,7 +17,7 @@ const Home = () => {
   // Get top five recipes from database
   useEffect(() => {
     const getTopFive = async () => {
-      const response = await fetch(`${backend_url}/`, {
+      const response = await fetch(`http://localhost:5050/`, {
         method: "GET",
       });
       const json = await response.json();
