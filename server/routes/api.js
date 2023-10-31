@@ -38,8 +38,6 @@ router.post("/create",
             async (req, res) => {
 
     const recipe = RecipesModel(req.body)
-    console.log(recipe)
-
     try {
         // store image file in S3
         const params = {
