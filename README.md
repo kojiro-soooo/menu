@@ -43,6 +43,10 @@ Some future features include:
 ## How do I install and run the project?
 Coming soon!
 
+To try out all the features of the website, feel free to use this demo account:
+Email address: ar-demo@demo.com
+Password: ARdemo123
+
 ## How do I use the project?
 Coming soon!
 
