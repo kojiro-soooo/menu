@@ -77,7 +77,7 @@ const Recipe = ( {userId, userFullName} ) => {
                 <p>Complexity: {recipe.complexity}</p>
                 </div>
                 <div className="recipe-img">
-                <img src={recipe.imageURL} alt={recipe.title}></img>
+                <img src={recipe.imageUrl} alt={recipe.title}></img>
                 </div>
             </div>
             </div>
@@ -141,7 +141,7 @@ const Recipe = ( {userId, userFullName} ) => {
                     <p>Complexity: {recipe.complexity}</p>
                 </div>
                 <div className="recipe-img">
-                    <img src={recipe.imageURL} alt={recipe.title}></img>
+                    <img src={recipe.imageUrl} alt={recipe.title}></img>
                 </div>
                 </div>
             </div>

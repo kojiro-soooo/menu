@@ -58,10 +58,10 @@ const RecipesSchema = new mongoose.Schema({
         type: Array,
         required: false,
     },
-//     imageURL: {
-//         type: String,
-//         required: false
-//   }
+    imageUrl: {
+        type: String,
+        required: false
+  }
 });
 
 const RecipesModel = mongoose.model("Recipes", RecipesSchema)
