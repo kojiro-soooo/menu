@@ -107,6 +107,7 @@ const Create = ( {userId, isAuthenticated, isLoading} ) => {
                     type="file"
                     id="file-input"
                     name="ImageStyle"
+                    required
                 ></input>
                 <label>Recipe Name: </label>
                 <input
