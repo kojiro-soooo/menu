@@ -16,6 +16,7 @@ const Browse = () => {
   // scroll to top on first render
   useEffect(() => {
     window.scrollTo(0, 0);
+    console.log(filteredResult)
   }, []);
 
   // fetch data on first render

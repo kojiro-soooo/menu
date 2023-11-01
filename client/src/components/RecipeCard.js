@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { backend_url } from "../config";
 
 export const RecipeCard = ({ search, filteredResult, allRecipes }) => {
     // capitalizes country names
@@ -25,7 +26,7 @@ export const RecipeCard = ({ search, filteredResult, allRecipes }) => {
                     <Link
                     className="card"
                     style={{ textDecoration: "none" }}
-                    to={`/browse/recipes/${recipe._id}`}
+                    to={`${backend_url}/browse/recipes/${recipe._id}`}
                     >
                     <div className="browse-card">
                         <div className="browse-card__image">
@@ -53,7 +54,7 @@ export const RecipeCard = ({ search, filteredResult, allRecipes }) => {
                 <Link
                     className="card"
                     style={{ textDecoration: "none" }}
-                    to={`/browse/recipes/${recipe._id}`}
+                    to={`${backend_url}/browse/recipes/${recipe._id}`}
                 >
                     <div className="browse-card">
                     <div className="browse-card__image">
