@@ -45,19 +45,21 @@ const Recipe = ( {userId, userFullName} ) => {
                 </div>
                 <div className="recipe-card__left-half">
                 <h3 className="recipe-card__title">{recipe.title}</h3>
-                <ul>
+                <p>{recipe.instructions}</p>
+                {/* <ul>
                     {recipe.instructions.map((steps) => (
-                    <li>{steps}</li>
+                        <li>{steps}</li>
                     ))}
-                </ul>
+                </ul> */}
                 </div>
                 <div className="recipe-card__right-half">
                 <h3 className="recipe-card__title">Ingredients: </h3>
-                <ul>
+                <p>{recipe.ingredients}</p>
+                {/* <ul>
                     {recipe.ingredients.map((ingredient) => (
-                    <li>{ingredient}</li>
+                        <li>{ingredient}</li>
                     ))}
-                </ul>
+                </ul> */}
                 </div>
             </div>
             </div>
@@ -109,19 +111,21 @@ const Recipe = ( {userId, userFullName} ) => {
                 </div>
                 <div className="recipe-card__left-half">
                     <h3 className="recipe-card__title">{recipe.title}</h3>
-                    <ul>
+                    <p>{recipe.instructions}</p>
+                    {/* <ul>
                     {recipe.instructions.map((steps) => (
                         <li>{steps}</li>
                     ))}
-                    </ul>
+                    </ul> */}
                 </div>
                 <div className="recipe-card__right-half">
                     <h3 className="recipe-card__title">Ingredients: </h3>
-                    <ul>
+                    <p>{recipe.ingredients}</p>
+                    {/* <ul>
                     {recipe.ingredients.map((ingredient) => (
                         <li>{ingredient}</li>
                     ))}
-                    </ul>
+                    </ul> */}
                 </div>
                 </div>
             </div>

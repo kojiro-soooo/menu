@@ -171,3 +171,7 @@
   background-color: #dc3444;
   border-style: none;
 }
+
+p {
+    white-space: pre-line;
+}
