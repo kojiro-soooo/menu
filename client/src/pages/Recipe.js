@@ -15,7 +15,7 @@ const Recipe = ( {userId, userFullName} ) => {
 
   useEffect(() => {
     const getRecipe = async () => {
-        const response = await fetch(`/browse/recipes/${id}`, {
+        const response = await fetch(`${backend_url}/browse/recipes/${id}`, {
           method: "GET",
         });
         const json = await response.json();
