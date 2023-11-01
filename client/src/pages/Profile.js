@@ -15,15 +15,7 @@ const Profile = ( {userFullName, userEmail, isAuthenticated, isLoading} ) => {
             })
             const json = await response.json();
             setUserRecipes(json);
-            // .then((response) => {
-            //     const json = response.json();
-            //     console.log(json)
-            // })
-            // .catch((error) => {
-            //     console.log(error);
-            // });
         };
-
         getUserRecipes();
     }, [])
 
@@ -33,7 +25,6 @@ const Profile = ( {userFullName, userEmail, isAuthenticated, isLoading} ) => {
                 <div className="profile__card">
                     <h2>Loading...</h2>
                 </div>
-
             </div>
         )
     }

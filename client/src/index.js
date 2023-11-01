@@ -9,6 +9,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
             <Auth0Provider
                 domain="dev-c0dwltendwxbev8d.us.auth0.com"
+                cacheLocation='localstorage' // enables storing auth status in localstorage so it doesn't have to be retrieved on refresh
                 // clientId="nCEx1jEbQTgFbqzI1YrOtCfhfVvu74bU"
                 clientId="hV55iuMCaQkohRHQwujZdQanluWbNssp"
                 authorizationParams={{

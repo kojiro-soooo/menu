@@ -15,6 +15,7 @@ import { useEffect } from "react";
 
 function App() {
     const { user, isAuthenticated, isLoading } = useAuth0();
+
     return (
         isAuthenticated ? (
             <div className="App">

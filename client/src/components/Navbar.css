@@ -27,8 +27,8 @@
   max-height: 100px;
 }
 
-.navbar__logo a{
-height: 0px;}
+/* .navbar__logo a{
+height: 0px;} */
 
 
 .navbar__menu-icon{
@@ -53,23 +53,38 @@ height: 0px;}
 }
 
 .nav-elements ul li:not(:last-child) {
-  margin-right: 60px;
+  margin-right: 30px;
 }
 
-.nav-elements ul a {
+.nav-elements ul a, .nav-elements ul button  {
   font-size:18px;
-  font-weight: 400;
+  font-weight: 600;
   text-decoration: none;
   color: #2f234f;
+  background: #ffa500;
+  padding: 10px 20px;
+  border-radius: .25rem;
+  box-shadow: 0 2px;
+
+}
+
+.nav-elements ul a:hover {
+  font-size:18px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #2f234f;
+  box-shadow: 0 2px;
 }
 
 .nav-elements ul a.active {
-  color: #575c4c;
+  color: #2f234f;
   font-weight: 800;
   position: relative;
+  box-shadow: 0 2px;
 }
 
-.nav-elements ul a.active::after {
+
+/* .nav-elements ul a.active::after {
   content: "";
   position: absolute;
   bottom: -4px;
@@ -77,7 +92,84 @@ height: 0px;}
   width: 100%;
   height: 2px;
   background-color: #575c4c;
+} */
+
+.dropdown {
+    position: relative;
 }
+
+.dropdown-menu.active{
+    position: absolute;
+    right: 0;
+    top: calc(100% + .25rem);
+    background-color: white;
+    padding: .75rem;
+    border-radius: .25rem;
+    box-shadow: 0 2px;
+    opacity: 1;
+    transform: translateY(0);
+    z-index: 1;
+    width: 100%;
+ 
+}
+
+.dropdown-menu.active > ul,
+.dropdown-menu ul{
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-menu > ul > li,
+.dropdown-menu > ul > li > button {
+        width: 100%;
+        text-align: center;
+        padding: 10px 5px;
+}
+
+.dropdown-menu{
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 0.25rem);
+    background-color: white;
+    padding: .75rem;
+    border-radius: .25rem;
+    box-shadow: 0 2px;
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+/* .profile__dropdown.false {
+    display:none;
+}
+
+.profile__dropdown.active {
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+    top: 90px;
+    right: 100px;
+    background: white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    width: 150px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.profile__dropdown.active::before{
+    content:'';
+    position: absolute;
+    top: -5px;
+    right: 10px;
+    height: 20px;
+    width: 20px;
+    background: white;
+    transform: rotate(45deg);
+} */
+
+
 
 @media (max-width: 768px) {
   .navbar-elements ul li:not(:last-child){
