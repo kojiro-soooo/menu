@@ -26,6 +26,7 @@ const Browse = () => {
         method: "GET",
       });
       const json = await response.json();
+      console.log(json)
       setAllRecipes(json);
       setSearch(country);
     };
