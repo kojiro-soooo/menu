@@ -26,7 +26,7 @@ export const RecipeCard = ({ search, filteredResult, allRecipes }) => {
                     <Link
                     className="card"
                     style={{ textDecoration: "none" }}
-                    to={`${backend_url}/browse/recipes/${recipe._id}`}
+                    to={`/browse/recipes/${recipe._id}`}
                     >
                     <div className="browse-card">
                         <div className="browse-card__image">
@@ -63,7 +63,7 @@ export const RecipeCard = ({ search, filteredResult, allRecipes }) => {
                 <Link
                     className="card"
                     style={{ textDecoration: "none" }}
-                    to={`${backend_url}/browse/recipes/${recipe._id}`}
+                    to={`/browse/recipes/${recipe._id}`}
                 >
                     <div className="browse-card">
                     <div className="browse-card__image">
