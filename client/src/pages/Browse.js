@@ -21,7 +21,7 @@ const Browse = () => {
   // fetch data on first render
   useEffect(() => {
     const fetchRecipes = async () => {
-      const response = await fetch(`/browse`, {
+      const response = await fetch(`${backend_url}/browse`, {
         method: "GET",
       });
       const json = await response.json();
