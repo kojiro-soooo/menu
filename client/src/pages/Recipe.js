@@ -25,7 +25,7 @@ const Recipe = ( {userId, userFullName} ) => {
   }, []);
 
   const handleDelete = async () => {
-    await fetch(`/browse/recipes/${id}`, {
+    await fetch(`${backend_url}/browse/recipes/${id}`, {
       method: "DELETE",
     });
 

@@ -71,7 +71,7 @@ const Navbar = ( {userFullName, userId, isLoading, isAuthenticated} ) => {
                             <li>
                                 <div className="dropdown" ref={ refOne }>
                                     <button className="link" onClick={toggleProfile}> 
-                                        My Profile
+                                        My Account
                                     </button>
                                     <div className={`dropdown-menu ${profileDropdown && 'active'}`} >
                                         {/* Dropdown Content */}
