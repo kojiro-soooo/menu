@@ -49,6 +49,15 @@ export const RecipeCard = ({ search, filteredResult, allRecipes }) => {
     }
     
     if (allRecipes) {
+        if (allRecipes.length === 0) {
+            return(
+                <p className="no-results">
+                    There aren't any recipes... yet!
+                    <br></br>Be the first one to add a recipe by clicking "Create"
+                </p>
+            )
+        }
+
         return (
             allRecipes.map((recipe) => (
                 <Link
