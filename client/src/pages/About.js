@@ -27,7 +27,7 @@ const About = () => {
           noticed in the online culinary landscape by offering a unique set of
           features that set us apart.
         </p>
-        <h2> Browse Recipes from Every Country: </h2>
+        <h2> Browse Recipes from Every Country</h2>
         <p>
           We have curated an extensive collection of recipes from diverse
           cultures around the globe. Whether you're searching for traditional
@@ -36,7 +36,7 @@ const About = () => {
           world. Immerse yourself in the richness of international cuisines and
           embark on a gastronomic adventure.
         </p>
-        <h2>Share Your Own Recipes: </h2>
+        <h2>Share Your Own Recipes</h2>
         <p>
           We believe that the best recipes often come from home kitchens. That's
           why we provide a platform for you to showcase your culinary creations.
@@ -45,7 +45,7 @@ const About = () => {
           recipes, you'll become part of a global community that appreciates the
           art of cooking and sharing flavors from different cultures.
         </p>
-        <h2>Vote for Authenticity: </h2>
+        <h2>Vote for Authenticity</h2>
         <p>
           We understand the importance of authenticity in preserving culinary
           traditions. We have implemented a voting system where users can
@@ -54,7 +54,7 @@ const About = () => {
           creating a reliable resource for users seeking an authentic taste
           experience.
         </p>
-        <h2>Find Hard-to-Find Ingredients:</h2>
+        <h2>Find Hard-to-Find Ingredients</h2>
         <p>
           To make your cooking experience even more convenient, we offer a
           direct purchasing feature. When you discover a recipe that requires

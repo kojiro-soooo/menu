@@ -8,7 +8,7 @@
 }
 
 .navbar {
-  padding: 10px 20px;
+  padding: 5px 20px;
   /* height: 20%; */
   background-color: #fcefd2;
   position: relative;
@@ -24,7 +24,7 @@
 }
 
 .navbar__logo img {
-  max-height: 100px;
+  max-height: 80px;
 }
 
 /* .navbar__logo a{
@@ -57,14 +57,15 @@ height: 0px;} */
 }
 
 .nav-elements ul a, .nav-elements ul button  {
-  font-size:18px;
-  font-weight: 600;
-  text-decoration: none;
-  color: #2f234f;
-  background: #ffa500;
-  padding: 10px 20px;
-  border-radius: .25rem;
-  box-shadow: 0 2px;
+    font-family: 'Montserrat';  
+    font-size:18px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #2f234f;
+    /* background: #ffa500; */
+    padding: 10px 15px;
+    /* border-radius: .25rem; */
+    /* box-shadow: 0 2px; */
 
 }
 
@@ -74,6 +75,7 @@ height: 0px;} */
   text-decoration: none;
   color: #2f234f;
   box-shadow: 0 2px;
+  cursor: pointer;
 }
 
 .nav-elements ul a.active {

@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy');
+@import url('https://fonts.googleapis.com/css?family=Nerko+One');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 * {
   margin: 0; /* reset */
   padding: 0; /* reset */
@@ -18,6 +23,7 @@ body {
 
   display: flex;
   flex-direction: column;
+  background-image: url("images/output-onlinepngtools (1).png");
   background-color: #fff6e5;
   min-height: 100%;
 }
@@ -41,7 +47,7 @@ form label {
   margin: 0px 0px 10px 0px;
 }
 
-button {
+/* button {
   border-radius: 8px;
   border-style: none;
   box-sizing: border-box;
@@ -52,10 +58,23 @@ button {
   border: 1px solid rgba(0, 0, 0, 0.3);
   text-align: center;
   background-color: #efefef;
+} */
+
+button {
+    /* font-family: 'Montserrat';   */
+    font-size:18px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #2f234f;
+    background: #ffa500;
+    padding: 10px 15px;
+    border-radius: .25rem;
+    box-shadow: 0 2px;
+    cursor: pointer;
 }
 
 button:hover {
-  background-color: #fffdfd;
+  background-color: #ea9800;
 }
 
 input,

@@ -4,6 +4,7 @@ import HamburgerMenu from "../images/menu.png";
 import LoginButton  from "../components/Login";
 import LogoutButton from "../components/Logout";
 import { NavLink } from "react-router-dom";
+import { FaAngleDown } from "react-icons/fa6";
 import "./Navbar.css";
 
 const Navbar = ( {userFullName, userId, isLoading, isAuthenticated} ) => {
@@ -70,9 +71,9 @@ const Navbar = ( {userFullName, userId, isLoading, isAuthenticated} ) => {
                             </li>
                             <li>
                                 <div className="dropdown" ref={ refOne }>
-                                    <button className="link" onClick={toggleProfile}> 
-                                        My Account
-                                    </button>
+                                    <a className="link" onClick={toggleProfile}> 
+                                        My Account <FaAngleDown />
+                                    </a>
                                     <div className={`dropdown-menu ${profileDropdown && 'active'}`} >
                                         {/* Dropdown Content */}
                                         <ul className={`profile__dropdown ${profileDropdown && 'active'}`}>
@@ -122,8 +123,7 @@ const Navbar = ( {userFullName, userId, isLoading, isAuthenticated} ) => {
                         <NavLink to="/create">Create</NavLink>
                         </li> */}
                         <li>
-
-                            <LoginButton></LoginButton>
+                            <LoginButton isLoading={isLoading}/>
                         </li>
                         {/* <li>
                         <NavLink to="/feedback">Feedback</NavLink>

@@ -30,7 +30,11 @@ const Home = () => {
     <div className="home-container">
       <section className="featured-recipes">
         <h1 className="featured-recipes__title">
-          Your Tastiest Recipes, Waiting To Be Cooked.
+            {/* Taste the World */}
+            Explore the World,
+            <br></br>
+            One Recipe at a Time
+          {/* Your Tastiest Recipes, Waiting To Be Cooked. */}
         </h1>
         <div className="carousel__container">
           <MyCarousel topFive={topFive} />
@@ -39,7 +43,9 @@ const Home = () => {
       </section>
       <section className="countries">
         <div className="countries__title">
-          <h1>Travel The World Through Food</h1>
+            <h1>Now boarding for...</h1>
+            {/* <h1>Where are you headed today?</h1> */}
+          {/* <h1>Travel The World Through Food</h1> */}
         </div>
         <div className="country-container">
           <div className="countries__cards">

@@ -18,7 +18,7 @@
 
   /* margin: 40px 40px; */
   max-width: 100%;
-  padding: 70px 40px 140px 40px;
+  padding: 25px 40px 15px 40px;
   position:relative;
 }
 
@@ -43,10 +43,18 @@
 
 
 .featured-recipes__title {
-  color: rgb(0, 95, 0);
-  font-size: 40px;
-  text-align: center;
-  margin-bottom: 80px;
+    white-space: pre-line;
+    font-family: 'Luckiest Guy';
+    line-height: 1.5;
+    /* color: #fff6e5; */
+    color: orange;
+    -webkit-text-stroke: 0.1px black;
+    /* color: #009900; */
+    /* color: rgb(0, 95, 0); */
+    font-size: 70px;
+    text-align: center;
+    margin-bottom: 45px;
+    text-shadow: rgba(0, 0, 0, 0.753) 3px 4.5px ;
 }
 
 .carousel__container {
@@ -85,7 +93,7 @@
 
 .countries {
   position: relative;
-  padding: 80px 0px;
+  padding: 70px 0px;
 }
 
 .countries-background{
@@ -109,8 +117,14 @@
 }
 
 .countries__title h1 {
-  font-size: 40px;
-  color: orange;
+  font-size: 50px;
+  font-family: 'Nerko One';
+  /* color: #fff6e5; */
+    color: yellow;
+  -webkit-text-stroke: 1px black;
+  text-align: center;
+  font-size: 70px;
+  text-shadow: rgba(0, 0, 0, 0.753) 3px 4.5px ;
 }
 
 .country-container {
