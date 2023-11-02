@@ -1,0 +1,22 @@
+.recipe-card-container {
+    width: 276.25px;
+    padding: 15px 15px;
+}
+
+.recipe-card-container > a {
+    width: 100%;
+}
+
+/* .browse-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 100%;
+  } */
+
+
+/* .card {
+    margin: 0 15px 30px 15px;
+    max-height: 365px;
+  } */

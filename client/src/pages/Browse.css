@@ -96,14 +96,13 @@
   height: 30px;
 }
 
-.browse-cards {
+/* .browse-cards {
   display: flex;
   flex-wrap: wrap;
-  /* background-color: blue; */
   justify-content: center;
   margin: 0 auto;
   max-width: 100%;
-}
+} */
 
 .results-container {
   height: 100%;

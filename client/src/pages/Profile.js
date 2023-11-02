@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { backend_url } from "../config";
 import "./Profile.css"
+import { RecipeCard } from "../components/RecipeCard";
 
 const Profile = ( {userFullName, userEmail, isAuthenticated, isLoading} ) => {
 
@@ -33,15 +34,18 @@ const Profile = ( {userFullName, userEmail, isAuthenticated, isLoading} ) => {
         <div className="profile__container">
             <div className="profile__card">
                 <div className="profile__content">
-                    <h1>My Account</h1>
-                        <div className="user-information">
+                    <h1>Profile</h1>
+                    <div className="user-information">
                         <h3>Account Information</h3>
                             <p>Name: {userFullName}</p>
                             <p>Email: {userEmail}</p>
-                        </div>
-                    <div className="user-recipes">
+                    </div>
+                    <div className="user-recipes__title">
                         <h3>Your Recipes</h3>
-                            <ul>
+                    </div>
+                    <div className="user-recipes__container">
+                        <RecipeCard allRecipes={userRecipes}/>
+                            {/* <ul>
                                 {userRecipes && userRecipes.map((item) => 
                                     <li>
                                         <Link
@@ -50,7 +54,7 @@ const Profile = ( {userFullName, userEmail, isAuthenticated, isLoading} ) => {
                                         </Link>
                                     </li>
                                 )}
-                            </ul>
+                            </ul> */}
                     </div>
 
                 </div>

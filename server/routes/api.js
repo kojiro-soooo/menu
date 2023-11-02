@@ -85,6 +85,19 @@ router.get("/profile/:id", async (req, res) => {
     const userId = req.params.id
     const userRecipes = await RecipesModel.find({"userId":userId})
 
+    for (const recipe of userRecipes) {
+        const getObjectParams = {
+            Bucket: bucketName,
+            Key: recipe.recipeId
+        }
+
+        const getObjectCommand = new GetObjectCommand(getObjectParams);
+        const url = await getSignedUrl(s3Client, getObjectCommand, { expiresIn: 3600});
+        recipe.imageUrl = url
+        console.log("hi", url)
+
+    }
+
     try {
         res.send(userRecipes)
     } catch (error) {

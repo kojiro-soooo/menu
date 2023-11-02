@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { backend_url } from "../config";
+import "./RecipeCard.css"
 
 export const RecipeCard = ({ search, filteredResult, allRecipes }) => {
     // capitalizes country names
@@ -23,26 +24,28 @@ export const RecipeCard = ({ search, filteredResult, allRecipes }) => {
         } else {
             return(
                 filteredResult.map((recipe) => (
-                    <Link
-                    className="card"
-                    style={{ textDecoration: "none" }}
-                    to={`/browse/recipes/${recipe._id}`}
-                    >
-                    <div className="browse-card">
-                        <div className="browse-card__image">
-                        <img src={recipe.imageUrl} alt={recipe.title}></img>
+                    <div className="recipe-card-container">
+                        <Link
+                        className="card"
+                        style={{ textDecoration: "none" }}
+                        to={`/browse/recipes/${recipe._id}`}
+                        >
+                        <div className="browse-card">
+                            <div className="browse-card__image">
+                            <img src={recipe.imageUrl} alt={recipe.title}></img>
+                            </div>
+                            <div className="browse-card__text">
+                            <h3 className="browse-card__title">{recipe.title}</h3>
+                            <p id="browse-card__country">{capitalize(recipe.country)}</p>
+                            <div className="browse-card__details">
+                                <p>Authenticity: {recipe.authenticity}</p>
+                                <p>Taste: {recipe.taste}</p>
+                                <p>Complexity: {recipe.complexity}</p>
+                            </div>
+                            </div>
                         </div>
-                        <div className="browse-card__text">
-                        <h3 className="browse-card__title">{recipe.title}</h3>
-                        <p id="browse-card__country">{capitalize(recipe.country)}</p>
-                        <div className="browse-card__details">
-                            <p>Authenticity: {recipe.authenticity}</p>
-                            <p>Taste: {recipe.taste}</p>
-                            <p>Complexity: {recipe.complexity}</p>
-                        </div>
-                        </div>
+                        </Link>
                     </div>
-                    </Link>
                 ))
             )
         }
@@ -60,26 +63,28 @@ export const RecipeCard = ({ search, filteredResult, allRecipes }) => {
 
         return (
             allRecipes.map((recipe) => (
-                <Link
-                    className="card"
-                    style={{ textDecoration: "none" }}
-                    to={`/browse/recipes/${recipe._id}`}
-                >
-                    <div className="browse-card">
-                    <div className="browse-card__image">
-                        <img src={recipe.imageUrl} alt={recipe.title}></img>
-                    </div>
-                    <div className="browse-card__text">
-                        <h3 className="browse-card__title">{recipe.title}</h3>
-                        <p id="browse-card__country">{capitalize(recipe.country)}</p>
-                        <div className="browse-card__details">
-                        <p>Authenticity: {recipe.authenticity}</p>
-                        <p>Taste: {recipe.taste}</p>
-                        <p>Complexity: {recipe.complexity}</p>
+                <div className="recipe-card-container">
+                    <Link
+                        className="card"
+                        style={{ textDecoration: "none" }}
+                        to={`/browse/recipes/${recipe._id}`}
+                    >
+                        <div className="browse-card">
+                        <div className="browse-card__image">
+                            <img src={recipe.imageUrl} alt={recipe.title}></img>
                         </div>
-                    </div>
-                    </div>
-                </Link>
+                        <div className="browse-card__text">
+                            <h3 className="browse-card__title">{recipe.title}</h3>
+                            <p id="browse-card__country">{capitalize(recipe.country)}</p>
+                            <div className="browse-card__details">
+                            <p>Authenticity: {recipe.authenticity}</p>
+                            <p>Taste: {recipe.taste}</p>
+                            <p>Complexity: {recipe.complexity}</p>
+                            </div>
+                        </div>
+                        </div>
+                    </Link>
+                </div>
             ))  
         )
     }
