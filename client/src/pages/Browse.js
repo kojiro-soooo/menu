@@ -54,12 +54,36 @@ const Browse = () => {
   };
 
   return (
+    allRecipes && (
     <div className="browse-container">
       <div className="browse-content">
-        <div className="filter-helper">
-          <div className="results-text">
-            {search ? (
-              <>
+        <div className="filter">
+            <div className="filter-header">
+                <h2>Filter by</h2>
+                <button
+                    className="reset-button"
+                    onClick={() => {
+                        handleReset();
+                        }}
+                        >
+                    Reset Filter
+                </button>
+            </div>
+            {/* <div className="filter-body"> */}
+                <div className="filter__content">
+                    <form className="filter-country">
+                        <label>Country</label>
+                        <input
+                        onChange={(event) => {
+                            setSearch(event.target.value);
+                        }}
+                        placeholder="e.g. Italy"
+                        ></input>
+                    </form>
+                {/* </div> */}
+          </div>
+        {/* {search ? (
+            <>
                 <h3>Showing Results For: {search}</h3>
                 <button
                   className="reset-button"
@@ -72,23 +96,10 @@ const Browse = () => {
               </>
             ) : (
               <h3>Showing All Results</h3>
-            )}
-          </div>
+            )} */}
         </div>
-        <div className="results-container">
-          <div className="filter">
-            <div className="filter__content">
-              <form>
-                <label>Filter by country:</label>
-                <input
-                  onChange={(event) => {
-                    setSearch(event.target.value);
-                  }}
-                  placeholder="e.g. Italy"
-                ></input>
-              </form>
-            </div>
-          </div>
+        {/* <div className="results-container"> */}
+          
           <div className="browse-cards">
             <RecipeCard 
                 search={search} 
@@ -96,9 +107,9 @@ const Browse = () => {
                 allRecipes={allRecipes}
             />
           </div>
-        </div>
+        {/* </div> */}
       </div>
-    </div>
+    </div>)
   );
 };
 

@@ -13,12 +13,14 @@ export const RecipeCard = ({ search, filteredResult, allRecipes }) => {
         return words.join(" ");
     };
 
-    if (search) {
+    console.log(search)
+
+    if (search.length != 0) {
         if (filteredResult.length === 0) {
             return(
                 <p className="no-results">
-                    There aren't any recipes from that country... yet!
-                    <br></br>Be the first one to add a recipe by clicking "Create"
+                    There aren't any recipes from that country... yet.
+                    <br></br>Be the first one to add a recipe!
                 </p>
             )
         } else {
@@ -32,7 +34,7 @@ export const RecipeCard = ({ search, filteredResult, allRecipes }) => {
                         >
                         <div className="browse-card">
                             <div className="browse-card__image">
-                            <img src={recipe.imageUrl} alt={recipe.title}></img>
+                            <img src={recipe.imageUrl} alt={recipe.title} loading="lazy"></img>
                             </div>
                             <div className="browse-card__text">
                             <h3 className="browse-card__title">{recipe.title}</h3>
@@ -55,8 +57,8 @@ export const RecipeCard = ({ search, filteredResult, allRecipes }) => {
         if (allRecipes.length === 0) {
             return(
                 <p className="no-results">
-                    There aren't any recipes... yet!
-                    <br></br>Be the first one to add a recipe by clicking "Create"
+                    There aren't any recipes... yet.
+                    <br></br>Be the first one to add a recipe!
                 </p>
             )
         }
@@ -71,7 +73,7 @@ export const RecipeCard = ({ search, filteredResult, allRecipes }) => {
                     >
                         <div className="browse-card">
                         <div className="browse-card__image">
-                            <img src={recipe.imageUrl} alt={recipe.title}></img>
+                            <img src={recipe.imageUrl} alt={recipe.title} loading="lazy"></img>
                         </div>
                         <div className="browse-card__text">
                             <h3 className="browse-card__title">{recipe.title}</h3>

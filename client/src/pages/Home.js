@@ -48,7 +48,7 @@ const Home = () => {
           {/* <h1>Travel The World Through Food</h1> */}
         </div>
         <div className="country-container">
-          <div className="countries__cards">
+          <div className="countries__container">
             <CountryCard />
           </div>
           <div class="to-browse">

@@ -186,6 +186,7 @@ height: 0px;} */
   }
 
   .nav-elements {
+    display: flex;
     position: absolute;
     right: 0;
     top: 60px;
@@ -194,6 +195,11 @@ height: 0px;} */
     height: calc(100vh-60px);
     transition: all 0.3s ease-in;
     overflow:hidden;
+    z-index: 1;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
   }
 
   .nav-elements.active{
