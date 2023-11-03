@@ -141,8 +141,8 @@
   background-color: #fff6e5;
   /* box-shadow: 2px 5px; */
   border: 0.5px solid black;
-  /* justify-content: center;
-  align-items: center; */
+  justify-content: center;
+  /* align-items: center; */
   min-height: 50%;
 }
 
