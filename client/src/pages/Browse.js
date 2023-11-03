@@ -51,7 +51,7 @@ const Browse = () => {
   // resets search
   const handleReset = () => {
     setSearch("");
-  };
+};
 
   return (
     allRecipes && (
@@ -74,6 +74,7 @@ const Browse = () => {
                     <form className="filter-country">
                         <label>Country</label>
                         <input
+                        value={search}
                         onChange={(event) => {
                             setSearch(event.target.value);
                         }}

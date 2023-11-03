@@ -135,19 +135,19 @@
 .browse-cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   margin: 0 auto;
   max-width: 55vw;
   width: 70vw;
   background-color: #fff6e5;
   /* box-shadow: 2px 5px; */
   border: 0.5px solid black;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
   min-height: 50%;
 }
 
 .no-results {
-
+    padding: 30px;
 }
 
 /* .results-container {
