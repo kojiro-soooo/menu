@@ -75,7 +75,7 @@ const Recipe = ( {userId, userFullName} ) => {
             <div className="recipe-details__right-half">
                 <div className="recipe-ratings">
                 <p>Authenticity: {recipe.authenticity}</p>
-                <p>Taste: {recipe.taste}</p>
+                <p>Tastiness: {recipe.taste}</p>
                 <p>Complexity: {recipe.complexity}</p>
                 </div>
                 <div className="recipe-img">

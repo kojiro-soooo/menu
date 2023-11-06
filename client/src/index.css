@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Luckiest+Guy');
 @import url('https://fonts.googleapis.com/css?family=Nerko+One');
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
 
 * {
   margin: 0; /* reset */
@@ -15,17 +16,18 @@
 }
 
 body {
-  /* background-color: #ffffff;*/
-  /* height: 100%; */
+    /* background-color: #ffffff;*/
+    /* height: 100%; */
 
-  /* disables form validation messages when enabled*/
-  /* scroll-behavior: smooth; */
+    /* disables form validation messages when enabled*/
+    /* scroll-behavior: smooth; */
 
-  display: flex;
-  flex-direction: column;
-  background-image: url("images/output-onlinepngtools (1).png");
-  background-color: #fff6e5;
-  min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* background-image: url("images/output-onlinepngtools (1).png"); */
+    /* background-color: #fff6e5; */
+    background-color: #fff6e5;
+    min-height: 100%;
 }
 
 code {
@@ -35,6 +37,7 @@ code {
 
 .app-container {
   position: relative;
+  width: 100%;
 }
 
 form label {

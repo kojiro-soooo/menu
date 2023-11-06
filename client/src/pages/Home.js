@@ -4,6 +4,7 @@ import { backend_url } from "../config";
 import { MyCarousel } from "../components/MyCarousel";
 import { CountryCard } from "../components/CountryCard";
 import "./Home.css";
+import collage from "../images/food_collage.png"
 
 const Home = () => {
   // Used to store top five recipes from database
@@ -29,21 +30,49 @@ const Home = () => {
   return (
     <div className="home-container">
       <section className="featured-recipes">
-        <h1 className="featured-recipes__title">
-            {/* Taste the World */}
-            Explore the World,
-            <br></br>
-            One Recipe at a Time
-          {/* Your Tastiest Recipes, Waiting To Be Cooked. */}
-        </h1>
-        <div className="carousel__container">
-          <MyCarousel topFive={topFive} />
+        <div className="featured-recipes__title">
+                <p>Explore the world,</p>
+                <div className="titles_container">
+                <p>one</p>
+                <div className="titles">
+                    <span>Japanese</span>
+                    <span>Swedish</span>
+                    <span>Italian</span>
+                    <span>Ukranian</span>
+                    <span>Japanese</span>
+                </div>
+                <p>recipe</p>
+                </div>
+                <p>at a time.</p>
         </div>
-        <div className="featured-background"></div>
-      </section>
+        <div className="featured-collage">
+            <img src={collage} alt="pad thai, mapo tofu, nabe soup, spare ribs, sushi, oyako donburi, seafood boil"></img>
+        </div>
+        </section>
+        <section className="midsection">
+        <div className="midsection__title">
+            <h1 className="carousel__title">
+                Share authentic recipes with 
+                <br></br>
+                your global neighbors
+            </h1>
+        </div>
+        <div className="carousel__container">
+            {/* <div className="carousel__content"> */}
+                <MyCarousel topFive={topFive} />
+            {/* </div> */}
+        </div>
+        <div className="midsection__background"></div>
+
+        </section>
       <section className="countries">
         <div className="countries__title">
-            <h1>Now boarding for...</h1>
+            <div className="cloud"></div>
+            <div className="cloud_two"></div>
+            <h1>Depart on your culinary adventure</h1>
+            {/* <h1>Depart on your culinary adventure</h1> */}
+            {/* <h1>Now boarding for...</h1>
+            <h1>Now boarding for...</h1> */}
             {/* <h1>Where are you headed today?</h1> */}
           {/* <h1>Travel The World Through Food</h1> */}
         </div>
@@ -53,7 +82,7 @@ const Home = () => {
           </div>
           <div class="to-browse">
             <Link to={"/browse"}>
-              <button>See All Recipes</button>
+              <button>Browse All Recipes</button>
             </Link>
           </div>
         </div>

@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { backend_url } from "../config";
 import "./RecipeCard.css"
+import { Rating } from '@mui/material';
 
 export const RecipeCard = ({ search, filteredResult, allRecipes }) => {
     // capitalizes country names
@@ -12,10 +13,8 @@ export const RecipeCard = ({ search, filteredResult, allRecipes }) => {
         }
         return words.join(" ");
     };
-
-    console.log(search)
-
-    if (search.length != 0) {
+    
+    if (search) {
         if (filteredResult.length === 0) {
             return(
                 <p className="no-results">
@@ -40,9 +39,16 @@ export const RecipeCard = ({ search, filteredResult, allRecipes }) => {
                             <h3 className="browse-card__title">{recipe.title}</h3>
                             <p id="browse-card__country">{capitalize(recipe.country)}</p>
                             <div className="browse-card__details">
+                                <Rating
+                                    name="card-rating"
+                                    value={recipe.taste}
+                                    precision={0.5}
+                                    readOnly={true}
+                                    size={"small"}
+                                />   
+                                {/* <p>Tastiness: {recipe.taste}</p>
                                 <p>Authenticity: {recipe.authenticity}</p>
-                                <p>Taste: {recipe.taste}</p>
-                                <p>Complexity: {recipe.complexity}</p>
+                                <p>Complexity: {recipe.complexity}</p> */}
                             </div>
                             </div>
                         </div>
@@ -79,9 +85,16 @@ export const RecipeCard = ({ search, filteredResult, allRecipes }) => {
                             <h3 className="browse-card__title">{recipe.title}</h3>
                             <p id="browse-card__country">{capitalize(recipe.country)}</p>
                             <div className="browse-card__details">
-                            <p>Authenticity: {recipe.authenticity}</p>
-                            <p>Taste: {recipe.taste}</p>
-                            <p>Complexity: {recipe.complexity}</p>
+                                <Rating
+                                    name="card-rating"
+                                    value={recipe.taste}
+                                    precision={0.5}
+                                    readOnly={true}
+                                    size={"small"}
+                                />   
+                                {/* <p>Tastiness: {recipe.taste}</p>
+                                <p>Authenticity: {recipe.authenticity}</p>
+                                <p>Complexity: {recipe.complexity}</p> */}
                             </div>
                         </div>
                         </div>

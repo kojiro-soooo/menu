@@ -1,5 +1,6 @@
 .navbar__container {
-  max-width: 1200px;
+  /* max-width: 1200px; */
+  max-width: 90vw;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -8,12 +9,13 @@
 }
 
 .navbar {
-  padding: 5px 20px;
-  /* height: 20%; */
-  background-color: #fcefd2;
-  position: relative;
-  border: 1px solid rgba(0, 0, 0, 0.3);
-
+    padding: 5px 20px;
+    /* height: 20%; */
+    background-color: #fff6e5;
+    position: relative;
+    /* border: 1px solid rgba(0, 0, 0, 0.3); */
+    box-shadow: rgba(0, 0, 0, 0.2) 0 1px ;
+    width: 100%;
 }
 
 .navbar__logo {
@@ -25,6 +27,7 @@
 
 .navbar__logo img {
   max-height: 80px;
+  background-color: orange;
 }
 
 /* .navbar__logo a{
@@ -180,39 +183,42 @@ height: 0px;} */
 }
 
 @media (max-width: 768px) {
-  .navbar__menu-icon {
-    display: block;
-    cursor: pointer;
-  }
+    .navbar {
+        width: 100%;
+    }
+    .navbar__menu-icon {
+        display: block;
+        cursor: pointer;
+    }
 
-  .nav-elements {
-    display: flex;
-    position: absolute;
-    right: 0;
-    top: 60px;
-    width: 0px;
-    background-color: #fef7e5;
-    height: calc(100vh-60px);
-    transition: all 0.3s ease-in;
-    overflow:hidden;
-    z-index: 1;
-    border-radius: 5px;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 30px;
-  }
+    .nav-elements {
+        display: flex;
+        position: absolute;
+        right: 0;
+        top: 60px;
+        width: 0px;
+        background-color: #fef7e5;
+        height: calc(100vh-60px);
+        transition: all 0.3s ease-in;
+        overflow:hidden;
+        z-index: 1;
+        border-radius: 5px;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 30px;
+    }
 
-  .nav-elements.active{
-    width: 270px;
-  }
+    .nav-elements.active{
+        width: 270px;
+    }
 
-  .nav-elements ul{
-    display: flex;
-    flex-direction: column;
-  }
+    .nav-elements ul{
+        display: flex;
+        flex-direction: column;
+    }
 
-  .nav-elements ul li {
-    margin-right: unset;
-    margin-top: 22px;
-  }
-}
+    .nav-elements ul li {
+        margin-right: unset;
+        margin-top: 22px;
+    }
+    }

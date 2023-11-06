@@ -109,7 +109,7 @@ const Create = ( {userId, isAuthenticated, isLoading} ) => {
                     name="ImageStyle"
                     required
                 ></input>
-                <label>Recipe Name: </label>
+                <label>Recipe Name </label>
                 <input
                     onChange={(event) => {
                     setTitle(event.target.value);
@@ -117,14 +117,14 @@ const Create = ( {userId, isAuthenticated, isLoading} ) => {
                     placeholder="Oyako Donburi"
                     required
                 ></input>
-                <label>Description: </label>
+                <label>Description </label>
                 <input
                     onChange={(event) => {
                     setDescription(event.target.value);
                     }}
                     placeholder="Share the story behind your recipe!"
                 ></input>
-                <label>Country: </label>
+                <label>Country </label>
                 <input
                     onChange={(event) => {
                     setCountry(event.target.value.toLowerCase());
@@ -132,7 +132,7 @@ const Create = ( {userId, isAuthenticated, isLoading} ) => {
                     placeholder="From which country does your recipe originate?"
                     required
                 ></input>
-                <label>Ingredients (separated with commas): </label>
+                <label>Ingredients </label>
                 <textarea
                     onChange={(event) => {
                     setIngredients(() => {
@@ -143,7 +143,7 @@ const Create = ( {userId, isAuthenticated, isLoading} ) => {
                     placeholder="1 cup cooking wine, 300g minced pork, 400g tofu..."
                     required
                 ></textarea>
-                <label>Instructions: </label>
+                <label>Instructions </label>
                 <textarea
                     onChange={(event) => {
                     setInstructions(() => {
@@ -151,10 +151,10 @@ const Create = ( {userId, isAuthenticated, isLoading} ) => {
                     });
                     }}
                     rows="10"
-                    placeholder="1. Cut tofu into 1-inch cubes 2. Heat vegetable oil on a pan on medium heat..."
+                    placeholder="1. Cut tofu into 1-inch cubes &#10;2. Heat vegetable oil on a pan on medium heat..."
                     required
                 ></textarea>
-                <label>Total Time To Cook (minutes): </label>
+                <label>Total Time To Cook (minutes) </label>
                 <input
                     type="number"
                     onChange={(event) => {
@@ -163,7 +163,7 @@ const Create = ( {userId, isAuthenticated, isLoading} ) => {
                     placeholder="30"
                     required
                 ></input>
-                <label>Servings: </label>
+                <label>Servings </label>
                 <input
                     type="number"
                     onChange={(event) => {
@@ -174,7 +174,7 @@ const Create = ( {userId, isAuthenticated, isLoading} ) => {
                 ></input>
                 <div className="ratings">
                     <div className="ratings__field">
-                    <label>Authenticity: </label>
+                    <label>Authenticity </label>
                     <input
                         type="number"
                         onChange={(event) => {
@@ -185,7 +185,7 @@ const Create = ( {userId, isAuthenticated, isLoading} ) => {
                     ></input>
                     </div>
                     <div className="ratings__field">
-                    <label>Taste: </label>
+                    <label>Taste </label>
                     <input
                         type="number"
                         onChange={(event) => {
@@ -196,7 +196,7 @@ const Create = ( {userId, isAuthenticated, isLoading} ) => {
                     ></input>
                     </div>
                     <div className="ratings__field">
-                    <label>Complexity: </label>
+                    <label>Complexity </label>
                     <input
                         type="number"
                         onChange={(event) => {
@@ -207,7 +207,7 @@ const Create = ( {userId, isAuthenticated, isLoading} ) => {
                     ></input>
                     </div>
                 </div>
-                <label>Tags (separate with commas): </label>
+                <label>Tags (separate with commas) </label>
                 <input
                     type="text"
                     onChange={(event) => {

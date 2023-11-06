@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import Logo from "../images/authentic-recipes-high-resolution-logo-color-on-transparent-background.png";
+import Logo from "../images/logo-no-background.png";
 import HamburgerMenu from "../images/menu.png";
 import LoginButton  from "../components/Login";
 import LogoutButton from "../components/Logout";
@@ -48,7 +48,7 @@ const Navbar = ( {userFullName, userId, isLoading, isAuthenticated} ) => {
                 <div className="navbar__container">
                     <div className="navbar__logo">
                         <NavLink to="/">
-                            <img src={Logo} alt="authentic recipes logo"></img>
+                            <img className="logo" src={Logo} alt="authentic recipes logo"></img>
                         </NavLink>
                     </div>
                     <div className="logo">
