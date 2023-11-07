@@ -38,6 +38,10 @@ footer {
   padding-bottom: 10px;
 }
 
+.socials-title h3 {
+    font-family: 'Montserrat';  
+}
+
 .socials-icons {
   display: flex;
   justify-content: space-between;
@@ -52,6 +56,10 @@ footer {
   padding-bottom: 10px;
 }
 
+.newsletter__label label{
+    font-family: 'Montserrat';  
+}
+
 .newsletter__input-button {
   display: flex;
 }
@@ -62,6 +70,7 @@ footer {
 
 .newsletter__input-button button{ 
     font-size: 12.5px;
+    font-family: 'Montserrat';  
 }
 
 .footer-elements {
@@ -82,10 +91,11 @@ footer {
 }
 
 .footer-elements ul a {
-  font-size: 18px;
-  font-weight: 400;
-  text-decoration: none;
-  color: white;
+    font-family: 'Montserrat';  
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
 }
 
 .footer-elements ul a:hover {
