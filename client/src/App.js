@@ -11,7 +11,6 @@ import PageNotFound from "./pages/PageNotFound";
 import UnauthorizedAccess from "./pages/UnauthorizedAccess";
 import { useAuth0 } from "@auth0/auth0-react";
 import "./index.css";
-import { useEffect } from "react";
 
 function App() {
     const { user, isAuthenticated, isLoading } = useAuth0();
