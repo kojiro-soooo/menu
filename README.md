@@ -39,7 +39,6 @@ Some future features include:
 - An easier or more interactive way for users to add recipes
 - A rating system to allow users to rate recipes
 - Implementation of FAQs, News, Careers, and Contact pages
-- A better logo and project name (taking suggestions!)
 
 ## How do I install and run the project?
 Coming soon!
