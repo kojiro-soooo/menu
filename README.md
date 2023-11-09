@@ -1,6 +1,6 @@
 # An e-commerce application for foodies around the world who want to share, vote on, and shop for authentic recipes, all in one place.
 
-[Live Demo](https://authentic-recipes.netlify.app/)
+[Live Demo](https://menu-io.netlify.app/)
 
 ## Description:
 
