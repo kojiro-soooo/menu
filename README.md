@@ -35,6 +35,7 @@ Some future features include:
 - ~~User authentication~~
 - Integrate TypeScript
 - Displaying nutrition information for recipes using some public API
+- Additional filters to filter through recipes
 - An interactive map of all countries in the world that allows users to search for recipes from the map
 - An easier or more interactive way for users to add recipes
 - A rating system to allow users to rate recipes
@@ -48,6 +49,8 @@ Email address: ar-demo@demo.com
 Password: ARdemo123
 
 ## How do I use the project?
-Coming soon!
+ - To create recipes, login (or create an account if you haven't already), and then click "Create" in the navigation bar. This will take you to a form where you can create a recipe and upload an image of your dish.
+ - To browse existing recipes, click on "Browse" in the navigation bar. Currently, you can filter through recipes by country.
+ - To delete your recipes, navigate to your profile page by clicking "My Account" in the navigation bar, then "Profile". Once on your profile page, you can see the recipes you've created. Click on the one you want to delete, then click "Delete" at the bottom of the recipe page that shows up.
 
 ------------------------------------------------------------------------------------
