@@ -13,7 +13,7 @@ As a migrant, I have a deep appreciation for authentic, homemade food and how it
 
 This website is a work in progress with the intent of accomplishing the goals listed above in increments. 
 
-### Why did I choose MERN, Heroku, Netlify, and AWS?
+### Why did I choose MERN, Heroku, Netlify, and Amazon S3?
 
 MERN (**M**ongodDB, **E**xpress, **R**eact, **N**ode) is a commonly used technology stack for building full-stack websites. For this particular project, I chose to use the MERN stack because of the following reasons:
 
