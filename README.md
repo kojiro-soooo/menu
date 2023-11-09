@@ -5,7 +5,7 @@
 ## Description:
 
 ### What is meNu?
-As a migrant, I have a deep appreciation for authentic, home-made food and the way that it connects me with the places that I've called home, including Japan, India, Australia, and the USA. As of now, I haven't been able to find a modern and polished website where:
+As a migrant, I have a deep appreciation for authentic, home-made food and the way that it connects me with the places that I've called home, including Japan, India, Australia, and the US. As of now, I haven't been able to find a modern and polished website where:
  1. A user can browse recipes from every country in the world [In-progress]
  2. A user can upload their own recipes [In-progress]
  3. A user can (similarly to websites like Reddit) vote for recipes that they agree are authentic [Backlog]
