@@ -31,7 +31,7 @@ I faced a lot of challenges (and still do) while building the project so it's di
 - The AWS universe is vast. Despite having been able to successfully integrate S3 with my project (which was already somewhat complex), I know that I've only touched the surface of all the possibilities available with AWS.
 
 Some future features include:
-~- User authentication~
+~~- User authentication~~
 - Integrate TypeScript
 - Displaying nutrition information for recipes using some public API
 - An interactive map of all countries in the world that allows users to search for recipes from the map
