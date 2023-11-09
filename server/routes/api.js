@@ -84,7 +84,7 @@ router.get("/browse", async (req, res) => {
 router.get("/profile/:id", async (req, res) => {
     const userId = req.params.id
     const userRecipes = await RecipesModel.find({"userId":userId})
-
+    
     for (const recipe of userRecipes) {
         const getObjectParams = {
             Bucket: bucketName,
