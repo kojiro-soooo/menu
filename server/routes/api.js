@@ -11,14 +11,10 @@ const secretAccessKey = process.env.SECRET_ACCESS_KEY
 const storage = multer.memoryStorage()
 const upload = multer({ storage: storage });
 
-// to commit changes, run git subtree push --prefix server heroku master
-
 import {
     S3Client,
     PutObjectCommand,
-    DeleteObjectCommand,
     GetObjectCommand,
-    ListObjectsV2Command
 } from "@aws-sdk/client-s3";
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner"
 
@@ -84,7 +80,7 @@ router.get("/browse", async (req, res) => {
 router.get("/profile/:id", async (req, res) => {
     const userId = req.params.id
     const userRecipes = await RecipesModel.find({"userId":userId})
-    
+
     for (const recipe of userRecipes) {
         const getObjectParams = {
             Bucket: bucketName,
