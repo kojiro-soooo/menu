@@ -1,5 +1,5 @@
 import React from 'react';
-import { Countries } from "../data";
+import { Countries } from "../../data";
 import { Link } from "react-router-dom";
 import "./CountryCard.css";
 

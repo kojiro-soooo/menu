@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { backend_url } from "../config";
+import { backend_url } from "../../config";
 import "./RecipeCard.css"
 import { Rating } from '@mui/material';
 

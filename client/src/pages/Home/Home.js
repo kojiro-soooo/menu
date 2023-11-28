@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { backend_url } from "../config";
-import { MyCarousel } from "../components/MyCarousel";
-import { CountryCard } from "../components/CountryCard";
+import { backend_url } from "../../config";
+import { MyCarousel } from "../../components/ui/MyCarousel";
+import { CountryCard } from "../../components/ui/CountryCard";
 import "./Home.css";
-import collage from "../images/food_collage.png"
+import collage from "../../images/food_collage.png"
 import { Modal, Box, Typography } from '@mui/material';
-import Logo from "../images/logo-color.png"
+import Logo from "../../images/logo-color.png"
 
 const Home = () => {
   // Used to store top five recipes from database

@@ -1,8 +1,8 @@
 import React, { useRef, useEffect, useState } from "react";
-import Logo from "../images/logo-no-background.png";
-import HamburgerMenu from "../images/menu.png";
-import LoginButton  from "../components/Login";
-import LogoutButton from "../components/Logout";
+import Logo from "../../images/logo-no-background.png";
+import HamburgerMenu from "../../images/menu.png";
+import LoginButton  from "./Login";
+import LogoutButton from "./Logout";
 import { NavLink } from "react-router-dom";
 import { FaAngleDown } from "react-icons/fa6";
 import "./Navbar.css";

@@ -64,18 +64,6 @@ const RecipesSchema = new mongoose.Schema({
   }
 });
 
-const RecipesModel = mongoose.model("Recipes", RecipesSchema)
+const RecipesModel = mongoose.model("Recipes", RecipesSchema);
 
-export default RecipesModel
-
-// module.exports = Recipes;
-
-//Allowed types in mongoDB:
-// String
-// Number
-// Date
-// Boolean
-// Buffer
-// ObjectId
-// Mixed
-// Array
+export default RecipesModel;

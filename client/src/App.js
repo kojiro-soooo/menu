@@ -1,14 +1,14 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Browse from "./pages/Browse";
-import Create from "./pages/Create";
-import Home from "./pages/Home";
-import Navbar from "./components/Navbar";
-import Recipe from "./pages/Recipe";
-import About from "./pages/About";
-import Footer from "./components/Footer"
-import Profile from "./pages/Profile";
-import PageNotFound from "./pages/PageNotFound";
-import UnauthorizedAccess from "./pages/UnauthorizedAccess";
+import Browse from "./pages/Browse/Browse";
+import Create from "./pages/Create/Create";
+import Home from "./pages/Home/Home";
+import Navbar from "./components/ui/Navbar";
+import Recipe from "./pages/Recipe/Recipe";
+import About from "./pages/About/About";
+import Footer from "./components/ui/Footer"
+import Profile from "./pages/Profile/Profile";
+import PageNotFound from "./pages/PageNotFound/PageNotFound";
+import UnauthorizedAccess from "./pages/UnauthorizedAccess/UnauthorizedAccess";
 import { useAuth0 } from "@auth0/auth0-react";
 import "./index.css";
 
