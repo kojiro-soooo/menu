@@ -6,7 +6,6 @@ import { CountryCard } from "../../components/ui/CountryCard";
 import "./Home.css";
 import collage from "../../images/food_collage.png"
 import { Modal, Box, Typography } from '@mui/material';
-import Logo from "../../images/logo-color.png"
 
 const Home = () => {
   // Used to store top five recipes from database

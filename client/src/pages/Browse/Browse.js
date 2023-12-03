@@ -1,9 +1,9 @@
 import "./Browse.css";
-import { React, useState } from "react";
+import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { RecipeCard } from "../../components/ui/RecipeCard";
 import useScrollToTop from "../../hooks/useScrollToTop";
-import useGetAllRecipes from "./useAllRecipes";
+import useGetAllRecipes from "./useGetAllRecipes";
 import useFilteredResult from "./useFilteredResult";
 
 const Browse = () => {
