@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import "./About.css";
 import useScrollToTop from "../../hooks/useScrollToTop";
 

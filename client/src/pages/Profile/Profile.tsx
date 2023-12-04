@@ -1,11 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { backend_url } from "../../config";
-import "./Profile.css"
+import "./Profile.css";
 import { RecipeCard } from "../../components/ui/RecipeCard";
+import AuthType from "../../../types/auth0-type";
 
-const Profile = ( {userFullName, userEmail, isAuthenticated, isLoading} ) => {
+interface ProfileProps extends AuthType {
+    userFullName: string;
+    userEmail: string;
+}
 
+const Profile = ({
+    userFullName,
+    userEmail,
+    isAuthenticated,
+    isLoading,
+}: ProfileProps) => {
     const { id } = useParams();
     const [userRecipes, setUserRecipes] = useState(null);
 
@@ -13,12 +23,12 @@ const Profile = ( {userFullName, userEmail, isAuthenticated, isLoading} ) => {
         const getUserRecipes = async () => {
             const response = await fetch(`${backend_url}/profile/${id}`, {
                 method: "GET",
-            })
+            });
             const json = await response.json();
             setUserRecipes(json);
         };
         getUserRecipes();
-    }, [])
+    }, []);
 
     if (isLoading) {
         return (
@@ -27,7 +37,7 @@ const Profile = ( {userFullName, userEmail, isAuthenticated, isLoading} ) => {
                     <h2>Loading...</h2>
                 </div>
             </div>
-        )
+        );
     }
 
     return (
@@ -37,29 +47,20 @@ const Profile = ( {userFullName, userEmail, isAuthenticated, isLoading} ) => {
                     <h1>Profile</h1>
                     <div className="user-information">
                         <h3>Account Information</h3>
-                            <p>Name: {userFullName}</p>
-                            <p>Email: {userEmail}</p>
+                        <p>Name: {userFullName}</p>
+                        <p>Email: {userEmail}</p>
                     </div>
                     <div className="user-recipes__title">
                         <h3>Your Recipes</h3>
                     </div>
-                    <div className="user-recipes__container">
-                        <RecipeCard allRecipes={userRecipes}/>
-                            {/* <ul>
-                                {userRecipes && userRecipes.map((item) => 
-                                    <li>
-                                        <Link
-                                            to={`/browse/recipes/${item._id}`}>
-                                                {item.title}
-                                        </Link>
-                                    </li>
-                                )}
-                            </ul> */}
-                    </div>
 
+                    {userRecipes && (
+                        <div className="user-recipes__container">
+                            <RecipeCard allRecipes={userRecipes} />
+                        </div>
+                    )}
                 </div>
             </div>
-            
         </div>
     );
 };

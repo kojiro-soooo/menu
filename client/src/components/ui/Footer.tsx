@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { FormEvent, useState } from "react";
 import "./Footer.css";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,7 +11,7 @@ import {
 
 const Footer = () => {
   const [submit, setSubmit] = useState(false);
-  const submitHandler = (e) => {
+  const submitHandler = (e:FormEvent) => {
     e.preventDefault();
     setSubmit(true);
   };
@@ -28,7 +28,6 @@ const Footer = () => {
               onSubmit={(e) => {
                 submitHandler(e);
               }}
-              netlify
             >
               <input type="hidden" name="newsletter" value="newsletter" />
 
@@ -58,19 +57,19 @@ const Footer = () => {
         <div className="footer-elements">
           <ul>
             <li>
-              <NavLink>About</NavLink>
+              <NavLink to={"/About"}>About</NavLink>
             </li>
             <li>
-              <NavLink>FAQs</NavLink>
+              <NavLink to="">FAQs</NavLink>
             </li>
             <li>
-              <NavLink>News</NavLink>
+              <NavLink to="">News</NavLink>
             </li>
             <li>
-              <NavLink>Careers</NavLink>
+              <NavLink to="">Careers</NavLink>
             </li>
             <li>
-              <NavLink>Contact</NavLink>
+              <NavLink to="">Contact</NavLink>
             </li>
           </ul>
         </div>

@@ -16,32 +16,31 @@ function App() {
     const { user, isAuthenticated, isLoading } = useAuth0();
 
     return (
-        isAuthenticated ? (
+         user && isAuthenticated ? (
             <div className="App">
                 <Router>
                     <div className="app-container">
                     <Navbar 
-                        userFullName={user.name}
-                        userId={user.sub}
+                        userId={user.sub ?? "undefined"}
                         isAuthenticated={isAuthenticated}
                         isLoading={isLoading}
                         />
                     <Routes>
-                        <Route exact path="/" element={<Home />}></Route>
+                        <Route path="/" element={<Home />}></Route>
                         <Route path="/about" element={<About />}></Route>
                         <Route path="/browse" element={<Browse />}></Route>
                         <Route path="/create" element={<Create 
-                            userId={user.sub}
+                            userId={user.sub ?? "undefined"}
                             isAuthenticated={isAuthenticated}
                             isLoading={isLoading}
                             />}></Route>
                         <Route path="/browse/recipes/:id" element={<Recipe 
-                            userFullName={user.name}
-                            userId={user.sub}
+                            userFullName={user.name ?? "undefined"}
+                            userId={user.sub ?? "undefined"}
                             />}></Route>
                         <Route path="/profile/:id" element={<Profile
-                            userFullName={user.name}
-                            userEmail={user.email}
+                            userFullName={user.name ?? "undefined"}
+                            userEmail={user.email ?? "undefined"}
                             isAuthenticated={isAuthenticated}
                             isLoading={isLoading}
                              />}></Route>
@@ -58,7 +57,7 @@ function App() {
                     <div className="app-container">
                     <Navbar />
                     <Routes>
-                        <Route exact path="/" element={<Home />}></Route>
+                        <Route path="/" element={<Home />}></Route>
                         <Route path="/about" element={<About />}></Route>
                         <Route path="/browse" element={<Browse />}></Route>
                         <Route path="/create" element={<UnauthorizedAccess />}></Route>
