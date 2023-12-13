@@ -29,12 +29,12 @@ I faced a lot of challenges (and still do) while building the project so it's di
 - Working on a passion project can be difficult when also trying to build an organized, complex project. Often I found my excitement for new ideas overwhelming because I would realize too late that I actually should've done X like Y instead. For example, I was so excited about the prospect of getting recipes on to my website that I dove straight into creating the "Create" page that I oversimplified the form. It was only when I created a recipe myself that I realized that I needed to think a lot more about how recipe instructions would be stored in the database while making it easy for users to input.
 - Working with complex forms (i.e. forms that allow for user uploads) is different from building forms that only take simple user inputs: handling multipart/form-data requires extra steps compared to handling just the default encoding type (application/x-www-form-urlencoded)
 - The AWS universe is vast. Despite having been able to successfully integrate S3 with my project (which was already somewhat complex), I know that I've only touched the surface of all the possibilities available with AWS.
-- Testing: I used this project as an opportunity to learn about testing. The biggest challenge I faced learning to write tests is that it's difficult to know what to test. Online resources mainly suggested writing tests that avoid testing implementation details (because implementation details can change over time and would break such tests, slowing down development), and focus more on writing maintainable tests that give me confidence that my code has the right functionality. 
+- Testing: I used this project as an opportunity to learn about testing. The biggest challenge I faced learning to write tests is that it's difficult to know what to test. Online resources mainly suggested writing tests that avoid testing implementation details (because implementation details can change over time and would break such tests, slowing down development), and focus more on writing maintainable tests that give me confidence that my code has the right functionality. Testing has also forced me to think more about how I write my code. It has allowed me to learn about stateless and stateful components, and why I should be picking one over the other in specific scenarios. 
 
 Some future features include:
 
 - ~~User authentication~~
-- Integrate TypeScript
+- ~~Integrate TypeScript~~
 - Displaying nutrition information for recipes using some public API
 - Additional filters to filter through recipes
 - An interactive map of all countries in the world that allows users to search for recipes from the map
