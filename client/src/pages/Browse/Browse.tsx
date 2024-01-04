@@ -1,7 +1,7 @@
 import "./Browse.css";
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
-import { RecipeCard } from "../../components/ui/RecipeCard";
+import { RecipeCard } from "../../components/ui/RecipeCard/RecipeCard";
 import useScrollToTop from "../../hooks/useScrollToTop";
 import useGetAllRecipes from "./useGetAllRecipes";
 import useFilteredResult from "./useFilteredResult";

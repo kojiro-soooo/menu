@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { backend_url } from "../../config";
-import { MyCarousel } from "../../components/ui/MyCarousel";
-import { CountryCard } from "../../components/ui/CountryCard";
+import { MyCarousel } from "../../components/ui/MyCarousel/MyCarousel";
+import { CountryCard } from "../../components/ui/CountryCard/CountryCard";
 import "./Home.css";
 import collage from "../../images/food_collage.png";
 import { Modal, Box, Typography } from "@mui/material";
