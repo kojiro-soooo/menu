@@ -1,24 +1,18 @@
 import React, { useRef, useEffect, useState } from "react";
-import Logo from "../../images/logo-no-background.png";
-import HamburgerMenu from "../../images/menu.png";
-import LoginButton from "./Login";
-import LogoutButton from "./Logout";
+import Logo from "../../../images/logo-no-background.png";
+import HamburgerMenu from "../../../images/menu.png";
+import LoginButton from "../Login/Login";
+import LogoutButton from "../Logout/Logout";
 import { NavLink } from "react-router-dom";
 import { FaAngleDown } from "react-icons/fa6";
 import "./Navbar.css";
-import AuthType from "../../../types/auth0-type";
+import AuthType from "../../../../types/auth0-type";
 
 interface NavBarProps extends AuthType {
-    userId?: string
+    userId?: string;
 }
 
-const Navbar = ({
-    userId,
-    isLoading,
-    isAuthenticated,
-}: 
-    NavBarProps
-) => {
+const Navbar = ({ userId, isLoading, isAuthenticated }: NavBarProps) => {
     const [navBar, setNavBar] = useState(false);
     const [profileDropdown, setProfileDropdown] = useState(false);
     const refOne = useRef<HTMLDivElement>(null);
@@ -31,7 +25,7 @@ const Navbar = ({
         setProfileDropdown(!profileDropdown);
     };
 
-    const clickOutside = (e:MouseEvent) => {
+    const clickOutside = (e: MouseEvent) => {
         if (refOne.current === null) {
             return null;
         }
@@ -62,6 +56,7 @@ const Navbar = ({
                             className="logo"
                             src={Logo}
                             alt="authentic recipes logo"
+                            data-testid="logo"
                         ></img>
                     </NavLink>
                 </div>
@@ -115,8 +110,7 @@ const Navbar = ({
                                             </NavLink>
                                         </li>
                                         <li>
-                                            <LogoutButton
-                                            ></LogoutButton>
+                                            <LogoutButton></LogoutButton>
                                         </li>
                                     </ul>
                                 </div>
@@ -136,7 +130,11 @@ const Navbar = ({
             <div className="navbar__container">
                 <div className="navbar__logo">
                     <NavLink to="/">
-                        <img src={Logo} alt="authentic recipes logo"></img>
+                        <img
+                            src={Logo}
+                            alt="authentic recipes logo"
+                            data-testid="logo"
+                        ></img>
                     </NavLink>
                 </div>
                 <div className="logo">

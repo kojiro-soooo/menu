@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { backend_url } from "../../config";
 import "./Profile.css";
-import { RecipeCard } from "../../components/ui/RecipeCard";
+import { RecipeCard } from "../../components/ui/RecipeCard/RecipeCard";
 import AuthType from "../../../types/auth0-type";
 
 interface ProfileProps extends AuthType {
