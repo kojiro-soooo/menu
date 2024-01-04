@@ -30,8 +30,8 @@ export const RecipeCard = ({
                 </p>
             );
         } else {
-            return filteredResult.map((recipe) => (
-                <div className="recipe-card-container">
+            return filteredResult.map((recipe, index) => (
+                <div className="recipe-card-container" key={index}>
                     <Link
                         className="card"
                         style={{ textDecoration: "none" }}
@@ -82,8 +82,8 @@ export const RecipeCard = ({
             );
         }
 
-        return allRecipes.map((recipe) => (
-            <div className="recipe-card-container">
+        return allRecipes.map((recipe, index) => (
+            <div className="recipe-card-container" key={index}>
                 <Link
                     className="card"
                     style={{ textDecoration: "none" }}

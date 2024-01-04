@@ -32,7 +32,7 @@ const Footer = () => {
               <input type="hidden" name="newsletter" value="newsletter" />
 
               <div className="newsletter__label">
-                <label>Sign up for our newsletter: </label>
+                <label>Sign up for our newsletter:</label>
               </div>
               <div className="newsletter__input-button">
                 <input type="email" required></input>
