@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./RecipeCard.css";
 import { Rating } from "@mui/material";
-import RecipeType from "../../../types/recipe-type";
+import RecipeType from "../../../../types/recipe-type";
 
 export const RecipeCard = ({
     search,

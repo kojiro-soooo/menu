@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "./MyCarousel.css";
 import { register } from "swiper/element/bundle"; // import register function to register Swiper custom elements
 import { CSSProperties } from "react";
-import RecipeType from "../../../types/recipe-type";
+import RecipeType from "../../../../types/recipe-type";
 // register Swiper custom elements
 register();
 
