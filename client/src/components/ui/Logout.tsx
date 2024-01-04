@@ -10,7 +10,7 @@ const LogoutButton  = () => {
             logoutParams: {
                 returnTo: window.location.origin
             }
-        })}>Logout</button>
+        })}>Log Out</button>
     );
 };
 

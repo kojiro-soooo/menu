@@ -7,6 +7,7 @@ import "./Home.css";
 import collage from "../../images/food_collage.png";
 import { Modal, Box, Typography } from "@mui/material";
 import RecipeType from "../../../types/recipe-type";
+import Countries from "../../Countries";
 
 const Home = () => {
     // Used to store top five recipes from database
@@ -119,7 +120,7 @@ const Home = () => {
                 </div>
                 <div className="country-container">
                     <div className="countries__container">
-                        <CountryCard />
+                        <CountryCard Countries={Countries}/>
                     </div>
                     <div className="to-browse">
                         <Link to={"/browse"}>
