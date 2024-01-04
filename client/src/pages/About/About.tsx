@@ -5,7 +5,10 @@ const About = () => {
     useScrollToTop();
 
     return (
-        <div className="about__container">
+        <div 
+            className="about__container"
+            data-testid="about_container"
+        >
             <div className="about__title">
                 <h1>Our Story</h1>
             </div>
