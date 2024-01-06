@@ -61,5 +61,13 @@
     "@tsconfig/create-react-app": "^2.0.1",
     "babel-jest": "^29.7.0",
     "typescript": "^4.9.5"
+  },
+  "jest": {
+    "moduleNameMapper": {
+        "swiper/element/bundle": ["<rootDir>/node_modules/swiper/swiper-element-bundle.mjs"]
+    },
+    "transformIgnorePatterns": [
+        "/node_modules/(?!swiper).+\\.mjs$"
+      ]
   }
 }
