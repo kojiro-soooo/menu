@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import "./MyCarousel.css";
+import { register } from "swiper/element/bundle"; // import register function to register Swiper custom elements
 import { CSSProperties } from "react";
 import RecipeType from "../../../../types/recipe-type";
+// register Swiper custom elements
+register();
 
 export const MyCarousel = ({
     topFive,
@@ -11,23 +14,23 @@ export const MyCarousel = ({
     return (
         topFive && (
             <swiper-container
-                slides-per-view="2"
-                space-between={30}
-                speed={100}
+                slides-per-view={3}
+                sliders-per-group={1}
+                space-between={15}
+                speed={1000}
                 loop={true}
-                pagination={true}
-                // css-mode="true"
+                // pagination={true}
                 style={{ "--swiper-pagination-color": "#fff" } as CSSProperties}
+                autoplay-pause-on-mouse-enter="true"
                 autoplay-delay="2500"
-                autoplay-disable-on-interaction="false"
             >
                 {topFive.map((recipe) => (
                     <swiper-slide>
                         <Link
                             className="carousel__link"
-                            onClick={(e) => {
-                                e.stopPropagation();
-                            }}
+                            // onClick={(e) => {
+                            //     e.stopPropagation();
+                            // }}
                             to={`/browse/recipes/${recipe._id}`}
                             style={{ textDecoration: "none" }}
                         >
