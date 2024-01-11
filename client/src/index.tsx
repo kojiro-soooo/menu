@@ -7,8 +7,8 @@ const rootElement = document.getElementById("root");
 
 if (rootElement) {
     const root = ReactDOM.createRoot(rootElement);
-    // const clientId = process.env.REACT_APP_CLIENT_ID_PRODUCTION; // prod
-    const clientId = process.env.REACT_APP_CLIENT_ID_STAGING // staging
+    const clientId = process.env.REACT_APP_CLIENT_ID_PRODUCTION; // prod
+    // const clientId = process.env.REACT_APP_CLIENT_ID_STAGING // staging
 
     root.render(
         clientId && (
