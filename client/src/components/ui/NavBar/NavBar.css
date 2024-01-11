@@ -25,52 +25,7 @@
     background-color: orange;
 }
 
-.dropdown {
-    position: relative;
-}
 
-.dropdown-menu.active {
-    position: absolute;
-    right: 0;
-    top: calc(100% + 0.25rem);
-    background-color: white;
-    padding: 0.75rem;
-    border-radius: 0.25rem;
-    box-shadow: 0 2px;
-    opacity: 1;
-    transform: translateY(0);
-    z-index: 1;
-    width: 100%;
-}
-
-.dropdown-menu.active > ul,
-.dropdown-menu ul {
-    display: flex;
-    flex-direction: column;
-}
-
-.dropdown-menu > ul > li,
-.dropdown-menu > ul > li > button {
-    width: 100%;
-    text-align: center;
-    padding: 10px 5px;
-}
-
-.dropdown-menu {
-    width: 100%;
-    position: absolute;
-    right: 0;
-    top: calc(100% + 0.25rem);
-    background-color: white;
-    padding: 0.75rem;
-    border-radius: 0.25rem;
-    box-shadow: 0 2px;
-    opacity: 0;
-    transform: translateY(-5px);
-    transition:
-        opacity 150ms ease-in-out,
-        transform 150ms ease-in-out;
-}
 
 /* .profile__dropdown.false {
     display:none;

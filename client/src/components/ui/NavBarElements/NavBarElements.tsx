@@ -1,9 +1,8 @@
 import { NavLink } from "react-router-dom";
 import LoginButton from "../Login/Login";
-import LogoutButton from "../Logout/Logout";
 import "./NavBarElements.css";
-import { useState, useRef, useEffect } from "react";
-import { FaAngleDown } from "react-icons/fa6";
+import LogoutButton from "../Logout/Logout";
+import Dropdown from "../Dropdown/Dropdown";
 
 const NavBarElements = ({
     showSidebar,
@@ -16,30 +15,6 @@ const NavBarElements = ({
     userId: string | undefined;
     isLoading: boolean | undefined;
 }) => {
-    const [profileDropdown, setProfileDropdown] = useState(false);
-    const refOne = useRef<HTMLDivElement>(null);
-
-    const toggleProfile = () => {
-        setProfileDropdown(!profileDropdown);
-    };
-
-    const clickOutside = (e: MouseEvent) => {
-        if (refOne.current === null) {
-            return null;
-        }
-        if (!refOne.current.contains(e.target as HTMLElement)) {
-            setProfileDropdown(false);
-        } else {
-            return null;
-        }
-    };
-
-    useEffect(() => {
-        document.addEventListener("click", clickOutside);
-        return () => {
-            document.removeEventListener("click", clickOutside);
-        };
-    }, []);
 
     if (isLoading) {
         return <div>Loading...</div>;
@@ -68,34 +43,7 @@ const NavBarElements = ({
                         <NavLink to="/create">Create</NavLink>
                     </li>
                     <li>
-                        <div className="dropdown" ref={refOne}>
-                            <a className="link" onClick={toggleProfile}>
-                                My Account <FaAngleDown />
-                            </a>
-                            <div
-                                className={`dropdown-menu ${
-                                    profileDropdown && "active"
-                                }`}
-                            >
-                                <ul
-                                    className={`profile__dropdown ${
-                                        profileDropdown && "active"
-                                    }`}
-                                >
-                                    <li>
-                                        <NavLink
-                                            to={`/profile/${userId}`}
-                                            onClick={toggleProfile}
-                                        >
-                                            Profile
-                                        </NavLink>
-                                    </li>
-                                    <li>
-                                        <LogoutButton></LogoutButton>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                        <Dropdown userId={userId} LogoutButton={LogoutButton}/>
                     </li>
                 </ul>
             </div>
