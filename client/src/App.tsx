@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Browse from "./pages/Browse/Browse";
 import Create from "./pages/Create/Create";
 import Home from "./pages/Home/Home";
-import Navbar from "./components/ui/Navbar/Navbar";
+import NavBar from "./components/ui/NavBar/NavBar";
 import Recipe from "./pages/Recipe/Recipe";
 import About from "./pages/About/About";
 import Footer from "./components/ui/Footer/Footer"
@@ -20,7 +20,7 @@ function App() {
             <div className="App">
                 <Router>
                     <div className="app-container">
-                    <Navbar 
+                    <NavBar 
                         userId={user.sub ?? "undefined"}
                         isAuthenticated={isAuthenticated}
                         isLoading={isLoading}
@@ -55,7 +55,7 @@ function App() {
             <div className="App">
                 <Router>
                     <div className="app-container">
-                    <Navbar />
+                    <NavBar />
                     <Routes>
                         <Route path="/" element={<Home />}></Route>
                         <Route path="/about" element={<About />}></Route>

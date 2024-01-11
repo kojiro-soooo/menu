@@ -1,0 +1,97 @@
+.nav-elements ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.nav-elements ul li:not(:last-child) {
+    margin-right: 30px;
+}
+
+.nav-elements ul a,
+.nav-elements ul button {
+    font-family: "Montserrat";
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #2f234f;
+    /* background: #ffa500; */
+    padding: 10px 15px;
+    /* border-radius: .25rem; */
+    /* box-shadow: 0 2px; */
+}
+
+.nav-elements ul a:hover {
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #2f234f;
+    box-shadow: 0 2px;
+    cursor: pointer;
+}
+
+.nav-elements ul a.active {
+    color: #2f234f;
+    font-weight: 800;
+    position: relative;
+    box-shadow: 0 2px;
+}
+
+@media (max-width: 768px) {
+    .nav-elements__container {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        overflow: hidden;
+        width: 100%;
+        height: 0;
+        transition: height 0.3s ease-in;
+        z-index: 25;
+        top: 95px;
+    }
+
+    .nav-elements__container.active-sidebar {
+        height: 100vh;
+    }
+
+    .nav-elements {
+        display: flex;
+        transition: height 0.3s ease-in;
+        width: 100%;
+        height: 0;
+        background-color: #fef7e5;
+        align-items: center;
+        justify-content: center;
+        z-index: 25;
+        overflow: hidden;
+    }
+
+    .nav-elements__container.active-sidebar .nav-elements {
+        height: 50vh;
+    }
+
+    .nav-elements ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-elements ul li {
+        margin-right: unset;
+        margin-top: 22px;
+    }
+    .sidebar__overlay {
+        height: 0;
+        width: 100%;
+        background-color: #000000;
+        opacity: 0;
+        transition:
+            opacity 0.3s ease-in,
+            height 0.3s ease-in;
+    }
+
+    .nav-elements__container.active-sidebar .sidebar__overlay {
+        opacity: 0.3;
+        height: 100vh;
+    }
+}
