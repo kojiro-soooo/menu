@@ -10,7 +10,7 @@ interface NavBarProps extends AuthType {
     userId?: string;
 }
 
-const Navbar = ({ userId, isLoading, isAuthenticated }: NavBarProps) => {
+const NavBar = ({ userId, isLoading, isAuthenticated }: NavBarProps) => {
     const [showSidebar, setShowSidebar] = useState(false);
     const toggleSidebar = () => {
         setShowSidebar(!showSidebar);
@@ -27,4 +27,4 @@ const Navbar = ({ userId, isLoading, isAuthenticated }: NavBarProps) => {
     );
 };
 
-export default Navbar;
+export default NavBar;
