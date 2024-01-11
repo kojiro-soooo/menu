@@ -19,7 +19,6 @@ const NavBar = ({ userId, isLoading, isAuthenticated }: NavBarProps) => {
     return (
         <nav className="navbar">
             <div className="navbar__container">
-                <h1>Renaming NavBar folder</h1>
                 <Logo/>
                 <HamburgerMenu toggleSidebar={toggleSidebar}/>
                 <NavBarElements isAuthenticated={isAuthenticated} userId={userId} isLoading={isLoading} showSidebar={showSidebar}/>
