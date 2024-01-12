@@ -12,7 +12,7 @@ export const RecipeCard = ({
     filteredResult?: Array<RecipeType>;
     allRecipes: Array<RecipeType>;
 }) => {
-    // capitalizes country names
+
     const capitalize = (str: string) => {
         const words = str.trim().split(" ");
         for (let i = 0; i < words.length; i++) {
@@ -21,6 +21,7 @@ export const RecipeCard = ({
         return words.join(" ");
     };
 
+    // TO DO: error handling for no recipes for a country should be done in the Browse component
     if (search && filteredResult) {
         if (filteredResult.length === 0) {
             return (
