@@ -16,9 +16,9 @@ const NavBarElements = ({
     isLoading: boolean | undefined;
 }) => {
 
-    if (isLoading) {
-        return <div>Loading...</div>;
-    }
+    // if (isLoading) {
+    //     return <div>Loading...</div>;
+    // }
 
     return isAuthenticated ? (
         <div
